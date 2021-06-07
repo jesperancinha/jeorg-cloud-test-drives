@@ -4,6 +4,6 @@
 
 |Topic|Description|
 |---|---|
-|Azure|Azure documentation|
+|[Azure](./azure/index.md)|Azure documentation|
 |VMWare|VMWare documentation|
 |AWS|AWS documentation|
