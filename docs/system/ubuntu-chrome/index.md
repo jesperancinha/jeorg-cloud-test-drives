@@ -32,6 +32,11 @@ sudo startunity
 
 ## [Remove warning Dev screen](https://gist.github.com/CoolOppo/183f42eef4e5cab328d7)
 
+-- BE VERY CAREFULL HERE --
+
+The danger is that depending on your notebook model is of course to end up getting it bricked.
+In other words, if this doesn't work there could potentially be a point of no return.
+
 ```bash
 sudo -s
 cd ~/Downloads
