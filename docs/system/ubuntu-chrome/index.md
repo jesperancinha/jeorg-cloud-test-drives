@@ -34,8 +34,9 @@ sudo startunity
 
 -- BE VERY CAREFULL HERE --
 
-The danger is that depending on your notebook model is of course to end up getting it bricked.
-In other words, if this doesn't work there could potentially be a point of no return.
+The danger here, is that depending on your notebook mode, is of course that it can end up getting bricked.
+In other words, if this doesn't work, you could potentially reach a point of no return where the computer gets bricked.
+Please read the [original documentation](https://gist.github.com/CoolOppo/183f42eef4e5cab328d7) about this for more info, so that you can make a conscious and informed decision.
 
 ```bash
 sudo -s
