@@ -1,4 +1,4 @@
-# Ubuntu Chrome
+# Ubuntu Chrome (Tested on ACER C302C)
 
 The whole concept of installing System in chrome is to disable OS system verification.
 This can be done permanently by removing the check via hardware or just skipping the reminding everytime you log in. `Ctr-D` is then your most common combination using Chrome Book in Dev mode.
@@ -30,9 +30,28 @@ sudo startunity
 
 14. Use `Ctrl-Alt-Shift-Back` and `Ctrl-Alt-Shift-Forward` to exchange systems
 
+## [Remove warning Dev screen](https://gist.github.com/CoolOppo/183f42eef4e5cab328d7)
+
+```bash
+sudo -s
+cd ~/Downloads
+flashrom -r bios.bin
+gbb_utility --set --flags=0x01 bios.bin bios.new
+flashrom -w bios.new
+```
+
+## Others
+
+```bash
+sudo sh /var/crouton -r list
+enter-chroot
+sudo mount /var -o remount,exec
+sudo sh /var/crouton -t unity -u
+```
 
 ## References
 
+-   [Neutering the “developer mode” screen on your Chromebook](https://gist.github.com/CoolOppo/183f42eef4e5cab328d7)
 -   [Ubuntu on chrome book](https://ubuntu.com/tutorials/install-ubuntu-on-chromebook#1-overview)
 -   [How I turned an old Chromebook Pixel into a native Linux laptop running Ubuntu](https://www.aboutchromebooks.com/news/how-to-turn-an-old-chromebook-pixel-into-native-linux-ubuntu-laptop/)
 -   [Shell scripts & noexec mounts](https://chromium.googlesource.com/chromiumos/docs/+/master/security/noexec_shell_scripts.md)
