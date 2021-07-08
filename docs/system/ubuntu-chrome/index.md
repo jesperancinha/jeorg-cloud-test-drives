@@ -50,6 +50,7 @@ If you see that something is wrong, but you still have access to the `shell`, yo
 
 ```bash
 flashrom -w bios.bin
+sudo rm -rf /usr/local/chroots/xenial
 ```
 
 ## Others
