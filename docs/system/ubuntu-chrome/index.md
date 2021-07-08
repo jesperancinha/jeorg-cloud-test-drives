@@ -32,7 +32,7 @@ sudo startunity
 
 ## [Remove warning Dev screen](https://gist.github.com/CoolOppo/183f42eef4e5cab328d7)
 
--- BE VERY CAREFULL HERE --
+-- BE VERY CAREFUL HERE --
 
 The danger here, is that depending on your notebook mode, is of course that it can end up getting bricked.
 In other words, if this doesn't work, you could potentially reach a point of no return where the computer gets bricked.
@@ -44,6 +44,12 @@ cd ~/Downloads
 flashrom -r bios.bin
 gbb_utility --set --flags=0x01 bios.bin bios.new
 flashrom -w bios.new
+```
+
+If you see that something is wrong, but you still have access to the `shell`, you can try to revert your changes by writing the original dump:
+
+```bash
+flashrom -w bios.bin
 ```
 
 ## Others
