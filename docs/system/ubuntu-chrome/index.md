@@ -7,14 +7,15 @@ This can be done permanently by removing the check via hardware or just skipping
 2. Press `Esc`, `Refresh` and then `Power Button`. The latter is located either on the keyboard or on the left side. Check the right side if it is not found on the left.
 3. Press `Ctrl-D`
 4. Accept `turn OS verification OFF`. Press `Enter`
-5. Wait for installation to complete
-6. Wait for restart to complete
-7. Press `Ctr-D` again
-8. Finish installation steps
-9. Use `Ctr-Alt-T` to summon `crosh` (Chrome Shell)
-10. `shell`
-11. Download script [crouton](https://goo.gl/fd3zc) and save it in the downloads folder
-12. We need to copy `crouton` [to a place where we can execute it](https://chromium.googlesource.com/chromiumos/docs/+/master/security/noexec_shell_scripts.md).
+5  Press `Ctr-D`
+6. Wait for installation to complete
+7. Wait for restart to complete
+8. Press `Ctr-D` again
+9. Finish installation steps
+10. Use `Ctr-Alt-T` to summon `crosh` (Chrome Shell)
+11. `shell`
+12. Download script [crouton](https://goo.gl/fd3zc) and save it in the downloads folder
+13. We need to copy `crouton` [to a place where we can execute it](https://chromium.googlesource.com/chromiumos/docs/+/master/security/noexec_shell_scripts.md).
 
 ```bash
 sudo mount /var -o remount,exec
@@ -53,6 +54,8 @@ flashrom -w bios.bin
 sudo rm -rf /usr/local/chroots/xenial
 ```
 
+Note that reverting this change isn't done in a trivial way. You really need to revert everything. So you need to go back to normal mode, let Chrome OS make all the updates, before you can go back to the developer mode with the OS verification turned off.
+
 ## Others
 
 ```bash
@@ -61,6 +64,36 @@ enter-chroot
 sudo mount /var -o remount,exec
 sudo sh /var/crouton -t unity -u
 ```
+
+## Performing updates
+
+We have these options to choose from operating systems among others: `xfce` and `unity`. They can be started with commands `startxfce4` and `startunity` respectively.
+
+However, we sometimes may need to do workarounds. Luckily we don't have to load the full system.
+If we issue this command we can get into our OS and perform the necessary workarounds:
+
+```bash
+sudo enter-chroot [-n chrootname]
+```
+
+## Issues
+
+#### Ubuntu Unity - No Desktop
+
+In the browser `shell`:
+
+```bash
+sudo enter-chroot
+sudo apt-get install --reinstall ubuntu-desktop
+```
+
+#### Write protected mode off
+
+To turn the C302C Google Notebook write protection off, we need to open it up. There is a hidden screw under a tape that holds the chassis against touching the circuit board.
+I advise against using this. I couldn't do anything with it, and the risk bricking the computer is quite high. Nothing ever happened to me, but fair warning that the risk is there.
+In any case I write this just for general knowledge.
+
+[![alt text](https://raw.githubusercontent.com/jesperancinha/jeorg-cloud-test-drives/main/docs/system/ubuntu-chrome/C302C.jpg "Asus Chromebook C302C")]
 
 ## References
 
