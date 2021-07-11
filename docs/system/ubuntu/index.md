@@ -25,8 +25,18 @@ chmod +x setup.sh
 
 `Example configuration: 8.Europe | 1.Amsterdam | 27.UTF-8 | 23. Guess optimal character set | ENTER`
 
+## Docker
+
+```bash
+docker it -exec <CONTAINERID> bash # bash into running container
+docker stop $(docker ps -a -q) # stops all containers
+docker system prune -a # remove everything
+docker stop $(docker ps -a -q) && docker system prune -a
+```
+
 ## References
 
+-   [extremely useful docker commands](https://www.codenotary.com/blog/extremely-useful-docker-commands/)
 -   [Install the Azure CLI on Linux](https://docs.microsoft.com/nl-nl/cli/azure/install-azure-cli-linux?pivots=apt)
 -   [Difference Between apt and apt-get Explained](https://itsfoss.com/apt-vs-apt-get-difference/)
 -   [Ubuntu on chrome book](https://ubuntu.com/tutorials/install-ubuntu-on-chromebook#1-overview)
