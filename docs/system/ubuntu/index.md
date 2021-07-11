@@ -14,8 +14,12 @@ apt update -y
 apt upgrade -y
 ```
 
+To download and run [setup.sh](https://github.com/jesperancinha/jeorg-cloud-test-drives/blob/main/docs/system/ubuntu/setup.sh):
+
 ```bash
-curl https://raw.githubusercontent.com/jesperancinha/jeorg-cloud-test-drives/main/docs/system/ubuntu/setup.sh -o setup.sh | bash
+curl https://raw.githubusercontent.com/jesperancinha/jeorg-cloud-test-drives/main/docs/system/ubuntu/setup.sh
+chmod +x setup.sh
+. ./setup.sh
 ```
 
 ## References

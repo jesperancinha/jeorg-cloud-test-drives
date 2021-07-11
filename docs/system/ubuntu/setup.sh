@@ -88,6 +88,7 @@ sudo apt install libupower-glib-dev -y
 sudo apt install liblzma-dev -y
 sudo apt install libevdev-dev -y
 sudo apt install dbus -y
+
 sudo apt install libdbus-1-dev libdbus-glib-1-dbus -y
 sudo apt install build-essential libdbus-glib-1-dev libgirepository1.0-dev libpython3-dev libdbus-1-dev -y
 sudo apt upgrade -y
