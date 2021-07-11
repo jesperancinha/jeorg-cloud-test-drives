@@ -10,6 +10,7 @@ apt-get install apt-file -y
 apt-file update -y
 apt-get install sudo -y
 apt install vim -y
+apt install curl -y
 apt update -y
 apt upgrade -y
 ```
@@ -17,10 +18,12 @@ apt upgrade -y
 To download and run [setup.sh](https://github.com/jesperancinha/jeorg-cloud-test-drives/blob/main/docs/system/ubuntu/setup.sh):
 
 ```bash
-curl https://raw.githubusercontent.com/jesperancinha/jeorg-cloud-test-drives/main/docs/system/ubuntu/setup.sh
+curl https://raw.githubusercontent.com/jesperancinha/jeorg-cloud-test-drives/main/docs/system/ubuntu/setup.sh -o setup.sh
 chmod +x setup.sh
 . ./setup.sh
 ```
+
+`Example configuration: 8.Europe | 1.Amsterdam | 27.UTF-8 | 23. Guess optimal character set | ENTER`
 
 ## References
 

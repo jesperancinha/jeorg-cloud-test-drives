@@ -12,7 +12,7 @@ echo " - apt-get install sudo -y"
 echo " - apt install vim -y"
 echo " - apt update -y"
 echo " - apt upgrade -y"
-echo "8.Europe | 1.Amsterdam | 27.UTF-8 | 23. Guess optimal character set | ENTER"
+echo "Example configuration: 8.Europe | 1.Amsterdam | 27.UTF-8 | 23. Guess optimal character set | ENTER"
 
 echo "We are assuming you are running this with '. ./setup.sh' and that you have enough space for this"
 echo "Hit Ctr-C if you just changed your mind"
