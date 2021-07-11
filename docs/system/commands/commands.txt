@@ -1,0 +1,5 @@
+history | grep "sudo apt" | grep -v "history" | cut -d' ' -f6-10 | tr -s "[:blank:]"
+sudo fdisk -l
+sudo mount /deb/sda1 /mnt
+sudo mkdir /home/<owner>/.cache/JetBrains/IntelliJIdea2021.1
+sudo chown <owner>:<group> /home/<owner>/.cache/JetBrains/IntelliJIdea2021.1/

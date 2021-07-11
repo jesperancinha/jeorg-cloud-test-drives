@@ -17,19 +17,19 @@ This can be done permanently by removing the check via hardware or just skipping
 12. Download script [crouton](https://goo.gl/fd3zc) and save it in the downloads folder
 13. We need to copy `crouton` [to a place where we can execute it](https://chromium.googlesource.com/chromiumos/docs/+/master/security/noexec_shell_scripts.md).
 
-```bash
-sudo mount /var -o remount,exec
-sudo cp ~/Downloads/crouton /var
-sudo sh /var/crouton -t unity
-```
+	```bash
+	sudo mount /var -o remount,exec
+	sudo cp ~/Downloads/crouton /var
+	sudo sh /var/crouton -t unity
+	```
 
-13. Start Ubuntu
+14. Start Ubuntu
 
-```bash
-sudo startunity
-```
+	```bash
+	sudo startunity
+	```
 
-14. Use `Ctrl-Alt-Shift-Back` and `Ctrl-Alt-Shift-Forward` to exchange systems
+15. Use `Ctrl-Alt-Shift-Back` and `Ctrl-Alt-Shift-Forward` to exchange systems
 
 ## [Remove warning Dev screen](https://gist.github.com/CoolOppo/183f42eef4e5cab328d7)
 
