@@ -19,7 +19,7 @@ To download and run [setup.sh](https://github.com/jesperancinha/jeorg-cloud-test
 
 ```bash
 curl https://raw.githubusercontent.com/jesperancinha/jeorg-cloud-test-drives/main/docs/system/ubuntu/setup.sh -o setup.sh
-chmod +x setup.sh
+chmod +x setup.sh	
 . ./setup.sh
 ```
 
@@ -36,6 +36,7 @@ docker stop $(docker ps -a -q) && docker system prune -a
 
 ## References
 
+-   [intel/thermal_daemon](https://github.com/intel/thermal_daemon)
 -   [extremely useful docker commands](https://www.codenotary.com/blog/extremely-useful-docker-commands/)
 -   [Install the Azure CLI on Linux](https://docs.microsoft.com/nl-nl/cli/azure/install-azure-cli-linux?pivots=apt)
 -   [Difference Between apt and apt-get Explained](https://itsfoss.com/apt-vs-apt-get-difference/)
