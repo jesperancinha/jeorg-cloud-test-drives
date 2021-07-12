@@ -67,6 +67,7 @@ sudo apt install wget -y
 sudo apt install vim -y
 sudo apt install nano -y
 sudo apt install pip -y
+sudo apt install ssh -y
 sudo apt install python3.7 -y
 sudo apt install python3-pip
 sudo apt install python -y
