@@ -36,6 +36,7 @@ docker stop $(docker ps -a -q) && docker system prune -a
 
 ## References
 
+-   [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 -   [intel/thermal_daemon](https://github.com/intel/thermal_daemon)
 -   [extremely useful docker commands](https://www.codenotary.com/blog/extremely-useful-docker-commands/)
 -   [Install the Azure CLI on Linux](https://docs.microsoft.com/nl-nl/cli/azure/install-azure-cli-linux?pivots=apt)

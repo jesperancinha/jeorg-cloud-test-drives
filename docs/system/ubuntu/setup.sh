@@ -54,7 +54,11 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 AZ_REPO=$(lsb_release -cs)
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" |
     sudo tee /etc/apt/sources.list.d/azure-cli.listsudo apt upgrade -y
-sudo apt update -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg |
+    sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo \
+  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/nullsudo apt update -y
 sudo apt update -y
 sudo apt upgrade -y
 echo "- Repo setup complete!"
@@ -109,6 +113,7 @@ echo "- Virtualization tools installation..."
 sudo apt install docker -y
 sudo apt install docker-compose -y
 sudo apt install docker.io -y
+sudo apt install docker-ce docker-ce-cli containerd. -y
 sudo apt upgrade -y
 sudo apt update -y
 echo "- Virtualization tools installation complete!"
