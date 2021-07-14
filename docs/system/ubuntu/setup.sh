@@ -52,8 +52,10 @@ echo "- Repo setup..."
 sudo apt install software-properties-common -y
 sudo add-apt-repository ppa:deadsnakes/ppa
 AZ_REPO=$(lsb_release -cs)
+sudo apt update -y
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" |
     sudo tee /etc/apt/sources.list.d/azure-cli.listsudo apt upgrade -y
+sudo apt update -y
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg |
     sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 echo \
