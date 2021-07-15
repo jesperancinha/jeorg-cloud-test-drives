@@ -120,9 +120,23 @@ sudo apt upgrade -y
 sudo apt update -y
 echo "- Virtualization tools installation complete!"
 
+echo "- Python installations..."
+pip install flask
+pip install futures
+pip install pebble
+pip install pika
+pip install coapthon
+pip install paho-mqtt
+pip install kafka-python
+pip install requests
+pip install netifaces
+echo "- Python installs complete!"
+
 sudo apt upgrade -y
 sudo apt update -y
 
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk install java 11.0.11.hs-adpt
+sdk install sbt
+
