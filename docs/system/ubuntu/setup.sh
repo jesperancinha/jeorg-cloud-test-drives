@@ -67,6 +67,7 @@ echo "- Repo setup complete!"
 
 echo "- Dev tools installation..."
 sudo apt install git -y
+sudo apt install git-gui -y
 sudo apt install gitk -y
 sudo apt install maven -y
 sudo apt install wget -y
