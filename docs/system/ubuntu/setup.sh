@@ -79,6 +79,7 @@ sudo apt install python3-pip
 sudo apt install python -y
 sudo apt install zip -y
 sudo apt install unzip -y
+sudo apt install jq -y
 sudo apt upgrade -y
 sudo apt update -y
 echo "- Dev tools installation complete!"
