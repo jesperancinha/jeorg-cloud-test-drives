@@ -82,6 +82,8 @@ sudo apt install zip -y
 sudo apt install unzip -y
 sudo apt install jq -y
 sudo apt install npm -y
+sudo apt install zsh -y
+sudo apt-get install fonts-powerline -y
 sudo apt upgrade -y
 sudo apt update -y
 echo "- Dev tools installation complete!"
