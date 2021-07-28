@@ -34,8 +34,25 @@ docker system prune -a # remove everything
 docker stop $(docker ps -a -q) && docker system prune -a
 ```
 
+## ZSH Shell
+
+The command line installation will install all needed libraries.
+My preferred style is Agnoster:
+
+```bash
+ZSH_THEME="agnoster" # (this is one of the fancy ones)
+# see https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#agnoster
+```
+
+For this, [Powerline](https://github.com/powerline/fonts) fonts are probably required to be installed. In Ubuntu, the bash script already does this for you.
+
 ## References
 
+-   [Powerline Fonts](https://github.com/powerline/fonts)
+-   [ohmyzsh on GitHub](https://github.com/ohmyzsh/ohmyzsh)
+-   [Agnoster ZSH Theme](https://github.com/agnoster/agnoster-zsh-theme)
+-   [Brave for Linux](https://brave.com/linux/#linux)
+-   [Oh My Z](https://ohmyz.sh/)
 -   [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 -   [intel/thermal_daemon](https://github.com/intel/thermal_daemon)
 -   [extremely useful docker commands](https://www.codenotary.com/blog/extremely-useful-docker-commands/)

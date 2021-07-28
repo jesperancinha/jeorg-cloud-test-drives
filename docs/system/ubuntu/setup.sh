@@ -34,6 +34,7 @@ echo "- Update complete!"
 echo "- Dev tools installation..."
 sudo apt install curl -y
 sudo apt install gpg -y
+sudo apt install apt-transport-https -y
 sudo apt upgrade -y
 sudo apt update -y
 echo "- Dev tools installation complete!"
@@ -61,6 +62,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg |
 echo \
   "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/nullsudo apt update -y
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 sudo apt update -y
 sudo apt upgrade -y
 echo "- Repo setup complete!"
@@ -84,6 +86,9 @@ sudo apt install jq -y
 sudo apt install npm -y
 sudo apt install zsh -y
 sudo apt-get install fonts-powerline -y
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update -y
+sudo apt install brave-browser -y
 sudo apt upgrade -y
 sudo apt update -y
 echo "- Dev tools installation complete!"
@@ -144,4 +149,5 @@ curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk install java 11.0.11.hs-adpt
 sdk install sbt
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
