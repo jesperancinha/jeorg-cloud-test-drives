@@ -142,6 +142,7 @@ pip install paho-mqtt
 pip install kafka-python
 pip install requests
 pip install netifaces
+pip install awslogs
 echo "- Python installs complete!"
 
 sudo apt upgrade -y
