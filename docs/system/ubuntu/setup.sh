@@ -143,6 +143,10 @@ pip install kafka-python
 pip install requests
 pip install netifaces
 pip install awslogs
+pip install awscli
+pip install locust
+pip3 install --upgrade pip
+pip3 install --upgrade awscli
 echo "- Python installs complete!"
 
 sudo apt upgrade -y
