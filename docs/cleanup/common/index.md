@@ -17,6 +17,17 @@ rm -rf ~/.sdkman/archives
 
 Use the above commands only when you are sure you want to get rid of everything and start fresh.
 
+## Lost JDKS
+
+### MAC-OS
+
+Sometimes, when we install applications or try out a few commands, we can inadvertently trigger an installation of some Java JDK.
+They are usually located in /Library/Java/JavaVirtualMachines/. If you are sure you don't need them, you can just remove then and save even more space.
+
+```bash
+sudo rm -rf /Library/Java/JavaVirtualMachines/* 
+```
+
 ## Docker
 
 A great deal of space can get to be used by docker. The best thing to do is to delete everything via Docker Desktop.
