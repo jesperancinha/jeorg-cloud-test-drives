@@ -17,6 +17,16 @@ rm -rf ~/.sdkman/archives
 
 Use the above commands only when you are sure you want to get rid of everything and start fresh.
 
+## Docker
+
+A great deal of space can get to be used by docker. The best thing to do is to delete everything via Docker Desktop.
+
+However, if you prefer the command line, you can just run:
+
+```shell
+docker system prune -a
+```
+
 ## /tmp/
 
 The `/tmp` folder can take up tremendous amounts of space. This is the reason you should clean it up regularly
