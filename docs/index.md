@@ -6,7 +6,7 @@
 |---|---|
 |[Azure](./azure/index.md)|Azure documentation|
 |VMWare|VMWare documentation|
-|AWS|AWS documentation|
+|[AWS](./aws/index.md)|AWS documentation|
 
 
 ## Internal Network table of contents
