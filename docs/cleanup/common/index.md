@@ -36,6 +36,18 @@ However, if you prefer the command line, you can just run:
 
 ```shell
 docker system prune -a
+docker builder prune
+docker system prune --all --force --volumes
+```
+
+## Remove postgres
+
+### Mac-OS
+
+```shell
+cd /Library/PostgreSQL/11
+cd /Library/PostgreSQL/13
+open open uninstall-postgres.app
 ```
 
 ## /tmp/
@@ -45,3 +57,4 @@ The `/tmp` folder can take up tremendous amounts of space. This is the reason yo
 ## Download
 
 The download folder is a far less obvious place to look at, but it may just be that old installation files are still lying there.
+

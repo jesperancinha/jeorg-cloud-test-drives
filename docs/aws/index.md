@@ -7,3 +7,4 @@
 3. [AWS Organizations]()
 4. [Amazon Guard Duty]()
 5. [Amazon DynamoDB]()
+6. [“The 6 R’s”: 6 Application Migration Strategies](https://docs.aws.amazon.com/whitepapers/latest/aws-migration-whitepaper/the-6-rs-6-application-migration-strategies.html)
