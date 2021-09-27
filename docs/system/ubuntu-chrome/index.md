@@ -93,7 +93,16 @@ To turn the C302C Google Notebook write protection off, we need to open it up. T
 I advise against using this. I couldn't do anything with it, and the risk bricking the computer is quite high. Nothing ever happened to me, but fair warning that the risk is there.
 In any case I write this just for general knowledge.
 
-[![alt text](https://raw.githubusercontent.com/jesperancinha/jeorg-cloud-test-drives/main/docs/system/ubuntu-chrome/C302C.jpg "Asus Chromebook C302C")]
+[![alt text](https://raw.githubusercontent.com/jesperancinha/jeorg-cloud-test-drives/main/docs/system/ubuntu-chrome/C302C.jpg "Asus Chromebook C302C")]()
+
+## Medium article
+
+If you would like to see a better example on how this extra system installation please check my article on medium:
+
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/swlh/chrome-os-guide-to-go-from-zero-to-devops-hero-in-a-nutshell-f66c4bc5782f)
+[Chrome OS Guide to go from Zero to DevOps Hero in a nutshell](https://medium.com/swlh/chrome-os-guide-to-go-from-zero-to-devops-hero-in-a-nutshell-f66c4bc5782f)
+
+[![alt text](./images/articles.zero.to.hero.intro..jpeg)]()
 
 ## References
 
