@@ -93,6 +93,8 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
 sudo apt upgrade -y
 sudo apt update -y
+sudo apt-get install postgresql-client -y
+sudo apt-get install update-manager-core -y
 echo "- Dev tools installation complete!"
 
 echo "- Library installation..."
