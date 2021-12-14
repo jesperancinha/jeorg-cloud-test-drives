@@ -46,6 +46,12 @@ ZSH_THEME="agnoster" # (this is one of the fancy ones)
 
 For this, [Powerline](https://github.com/powerline/fonts) fonts are probably required to be installed. In Ubuntu, the bash script already does this for you.
 
+## Install the latest Ubuntu version
+
+```shell
+sudo do-release-upgrade -d
+```
+
 ## References
 
 -   [Powerline Fonts](https://github.com/powerline/fonts)
