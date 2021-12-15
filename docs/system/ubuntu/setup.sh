@@ -94,7 +94,10 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 sudo apt upgrade -y
 sudo apt update -y
 sudo apt-get install postgresql-client -y
+echo "* Installing operating system update manager..."
 sudo apt-get install update-manager-core -y
+echo "* Installing sound controls..."
+sudo apt-get install pavucontrol -y
 echo "- Dev tools installation complete!"
 
 echo "- Library installation..."
