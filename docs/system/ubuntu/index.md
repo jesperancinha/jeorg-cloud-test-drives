@@ -52,6 +52,24 @@ For this, [Powerline](https://github.com/powerline/fonts) fonts are probably req
 sudo do-release-upgrade -d
 ```
 
+## Disabling Wayland login
+
+The new Ubuntu versions have a login that may influence applications such as Microsoft Teams. There is an issue reported where users are not allowed to share screens in the teams_1.4.00.26453 version. To solve that we can just disable Wayland login and default back to Xorg Login:
+
+1. Edit file `/etc/gdm3/custom.conf`.
+
+```shell
+sudo vim /etc/gdm3/custom.conf
+```
+
+2. Disable Wayland
+
+```properties
+[daemon]
+# Uncomment the line below to force the login screen to use Xorg
+WaylandEnable=false
+```
+
 ## References
 
 -   [Powerline Fonts](https://github.com/powerline/fonts)
