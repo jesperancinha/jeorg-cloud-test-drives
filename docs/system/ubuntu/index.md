@@ -70,8 +70,18 @@ sudo vim /etc/gdm3/custom.conf
 WaylandEnable=false
 ```
 
+## Get rid of ERR_NETWORK_CHANGED errors in Chrome
+
+I got this error very frequently in the Ubuntu Jammy Jellyfish version of Linux Ubuntu (You know which on it [is](https://cdimage.ubuntu.com/daily-live/current/jammy-desktop-amd64.iso). The only way I had to solve this was to disable IPv6 on a system level:
+
+```shell
+sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+```
+
 ## References
 
+-   [Regularly getting ERR_NETWORK_CHANGED errors in Chrome](https://superuser.com/questions/747735/regularly-getting-err-network-changed-errors-in-chrome)
 -   [Powerline Fonts](https://github.com/powerline/fonts)
 -   [ohmyzsh on GitHub](https://github.com/ohmyzsh/ohmyzsh)
 -   [Agnoster ZSH Theme](https://github.com/agnoster/agnoster-zsh-theme)
