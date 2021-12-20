@@ -72,7 +72,7 @@ WaylandEnable=false
 
 ## Get rid of ERR_NETWORK_CHANGED errors in Chrome
 
-I got this error very frequently in the Ubuntu Jammy Jellyfish version of Linux Ubuntu (You know which on it [is](https://cdimage.ubuntu.com/daily-live/current/jammy-desktop-amd64.iso). The only way I had to solve this was to disable IPv6 on a system level:
+I got this error very frequently in the Ubuntu Jammy Jellyfish version of Linux Ubuntu (You know which on it [is](https://cdimage.ubuntu.com/daily-live/current/jammy-desktop-amd64.iso)). The only way I found to solve this was to disable IPv6 on a system level:
 
 ```shell
 sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
