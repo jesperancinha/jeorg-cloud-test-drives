@@ -70,6 +70,18 @@ sudo vim /etc/gdm3/custom.conf
 WaylandEnable=false
 ```
 
+## Microphone issues
+
+When changing Ubuntu versions, we hope for the best and frequently we do get the best, but in some cases we get some bugs and it is not always clear if they come out of the new operating system or out some outdated library. I had issues once with the microphone and I was able to fix this easily using this library:
+
+```bash
+sudo apt-get install pavucontrol
+pavucontrol
+```
+
+In the `Input Devices`, you then have to unlock all channels and select your microphone. I recommend a computer restart after this.
+
+
 ## Get rid of ERR_NETWORK_CHANGED errors in Chrome
 
 I got this error very frequently in the Ubuntu Jammy Jellyfish version of Linux Ubuntu (You know which on it [is](https://cdimage.ubuntu.com/daily-live/current/jammy-desktop-amd64.iso)). The only way I found to solve this was to disable IPv6 on a system level:
