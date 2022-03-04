@@ -90,6 +90,13 @@ I got this error very frequently in the Ubuntu Jammy Jellyfish version of Linux 
 sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
 ```
+## Router not connecting to internet
+
+It may become a surprie to you (or not...) that docker can sometimes break up your internet connection due to the docker networks you create. In these cases, just remove all the networks with this simple command:
+
+```shell
+docker network prune
+```
 
 ## References
 
