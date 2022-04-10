@@ -1,7 +1,7 @@
 # Commands
 
 This is a list a command that have proven to be very useful to me ao far.
-They are very random and they have served different purposes so far.
+They are very random, and they have served different purposes so far.
 Search for the ones you are looking for in your browser.
 I provide the command, and the description on how it was used.
 

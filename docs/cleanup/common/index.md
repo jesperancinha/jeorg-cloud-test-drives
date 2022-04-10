@@ -58,3 +58,16 @@ The `/tmp` folder can take up tremendous amounts of space. This is the reason yo
 
 The download folder is a far less obvious place to look at, but it may just be that old installation files are still lying there.
 
+## Git Compress
+
+Git uses object that are meant to optimize its usage. Some of these objects are not needed at some point. To clean them you can use the following:
+
+```shell
+git gc --prune
+```
+
+or its heavier counter-part:
+
+```shell
+git gc --aggressive
+```
