@@ -2,6 +2,8 @@
 
 ## Prune Docker Container and Images
 
+>NOTE: For correct usage of the commands bellow, please check the source [aliases.md](https://github.com/jesperancinha/jeorg-cloud-test-drives/blob/main/docs/system/ubuntu/aliases.md) file directly.
+
 #### 1. Disconnect lost endpoints (not thoroughly tested/last resort)
 
 ```shell
