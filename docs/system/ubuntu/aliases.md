@@ -2,9 +2,22 @@
 
 ## Prune Docker Container and Images
 
+
+####1. Disconnect lost endpoints (not thoroughly tested/last resort)
 ```shell
-alias docker-prune='docker ps -a | xargs -I {}  docker stop {}
-        docker ps -a | xargs -I {}  docker rm {}
+alias docker-prune-lost-endpoints=`for network in $(docker network ls | awk '{print $2}' | grep -v bridge | grep -v ID | grep -v none | grep -v host); do
+  								for endpoint in $(docker network inspect buy-odd-yucca-concert_yucca-net | grep EndpointID | awk '{print $2}' | sed 's/"//g' | sed 's/,//g'); do
+  											echo $network $endpoint
+  											docker network disconnect -f $network $endpoint
+  									done
+								done`)
+```
+
+####2. Removes all docker containers and networks
+
+```shell
+alias docker-prune='docker ps -a --format ''{{.ID}}'' | xargs -I {}  docker stop {} &&
+        docker ps -a --format ''{{.ID}}'' | xargs -I {}  docker rm {} &&
         docker network prune &&
         docker system prune --all &&
         docker builder prune &&
@@ -19,4 +32,13 @@ alias git-pull='for f in *; do
         cd $f && git pull && git fetch -p && cd ..
     fi
 done'
+```
+
+
+```shell
+for network in docker network ls | awk '{print $2}' | grep -v bridge | grep -v ID | grep -v none | grep -v host; do
+  for endpoint in docker network inspect buy-odd-yucca-concert_yucca-net | grep EndpointID | awk '{print $2}' | sed 's/"//g' | sed 's/,//g'
+  	echo $network $endpoint
+  done
+done
 ```
