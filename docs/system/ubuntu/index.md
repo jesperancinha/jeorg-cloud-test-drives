@@ -98,6 +98,10 @@ It may become a surprie to you (or not...) that docker can sometimes break up yo
 docker network prune
 ```
 
+## Aliases
+
+There are several handy aliases that we can make. The most useful that I've used can be seen [here](./aliases.md).
+
 ## References
 
 -   [Regularly getting ERR_NETWORK_CHANGED errors in Chrome](https://superuser.com/questions/747735/regularly-getting-err-network-changed-errors-in-chrome)
