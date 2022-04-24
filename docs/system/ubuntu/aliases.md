@@ -2,8 +2,8 @@
 
 ## Prune Docker Container and Images
 
+#### 1. Disconnect lost endpoints (not thoroughly tested/last resort)
 
-####1. Disconnect lost endpoints (not thoroughly tested/last resort)
 ```shell
 alias docker-prune-lost-endpoints=`for network in $(docker network ls | awk '{print $2}' | grep -v bridge | grep -v ID | grep -v none | grep -v host); do
   								for endpoint in $(docker network inspect buy-odd-yucca-concert_yucca-net | grep EndpointID | awk '{print $2}' | sed 's/"//g' | sed 's/,//g'); do
@@ -13,7 +13,7 @@ alias docker-prune-lost-endpoints=`for network in $(docker network ls | awk '{pr
 								done`)
 ```
 
-####2. Removes all docker containers and networks
+#### 2. Removes all docker containers and networks
 
 ```shell
 alias docker-prune='docker ps -a --format ''{{.ID}}'' | xargs -I {}  docker stop {} &&
@@ -34,11 +34,13 @@ alias git-pull='for f in *; do
 done'
 ```
 
+## Git re-tag
 
 ```shell
-for network in docker network ls | awk '{print $2}' | grep -v bridge | grep -v ID | grep -v none | grep -v host; do
-  for endpoint in docker network inspect buy-odd-yucca-concert_yucca-net | grep EndpointID | awk '{print $2}' | sed 's/"//g' | sed 's/,//g'
-  	echo $network $endpoint
-  done
-done
+alias git-re-tag='_git-re-tag() {
+																		git tag "$2" "$1" &&
+																		git tag -d "$1" &&
+																		git push origin :refs/tags/"$1" &&
+																		git push --tags &&
+																		git pull --prune --tags }; _git-re-tag'
 ```
