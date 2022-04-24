@@ -6,11 +6,11 @@
 
 ```shell
 alias docker-prune-lost-endpoints=`for network in $(docker network ls | awk '{print $2}' | grep -v bridge | grep -v ID | grep -v none | grep -v host); do
-  								for endpoint in $(docker network inspect buy-odd-yucca-concert_yucca-net | grep EndpointID | awk '{print $2}' | sed 's/"//g' | sed 's/,//g'); do
-  											echo $network $endpoint
-  											docker network disconnect -f $network $endpoint
-  									done
-								done`)
+    for endpoint in $(docker network inspect buy-odd-yucca-concert_yucca-net | grep EndpointID | awk '{print $2}' | sed 's/"//g' | sed 's/,//g'); do
+      echo $network $endpoint
+      docker network disconnect -f $network $endpoint
+    done
+done`)
 ```
 
 #### 2. Removes all docker containers and networks
@@ -38,9 +38,9 @@ done'
 
 ```shell
 alias git-re-tag='_git-re-tag() {
-																		git tag "$2" "$1" &&
-																		git tag -d "$1" &&
-																		git push origin :refs/tags/"$1" &&
-																		git push --tags &&
-																		git pull --prune --tags }; _git-re-tag'
+                   git tag "$2" "$1" &&
+                   git tag -d "$1" &&
+                   git push origin :refs/tags/"$1" &&
+                   git push --tags &&
+                   git pull --prune --tags }; _git-re-tag'
 ```
