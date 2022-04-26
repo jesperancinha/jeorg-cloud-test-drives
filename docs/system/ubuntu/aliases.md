@@ -7,12 +7,12 @@
 #### 1. Disconnect lost endpoints (not thoroughly tested/last resort)
 
 ```shell
-alias docker-prune-lost-endpoints=`for network in $(docker network ls | awk '{print $2}' | grep -v bridge | grep -v ID | grep -v none | grep -v host); do
+for network in $(docker network ls | awk '{print $2}' | grep -v bridge | grep -v ID | grep -v none | grep -v host); do
     for endpoint in $(docker network inspect buy-odd-yucca-concert_yucca-net | grep EndpointID | awk '{print $2}' | sed 's/"//g' | sed 's/,//g'); do
       echo $network $endpoint
       docker network disconnect -f $network $endpoint
     done
-done`)
+done
 ```
 
 #### 2. Removes all docker containers and networks
