@@ -17,6 +17,8 @@ done
 
 #### 2. Removes all docker containers and networks
 
+Removes with prompt
+
 ```shell
 alias docker-prune='docker ps -a --format ''{{.ID}}'' | xargs -I {}  docker stop {} &&
         docker ps -a --format ''{{.ID}}'' | xargs -I {}  docker rm {} &&
@@ -24,6 +26,17 @@ alias docker-prune='docker ps -a --format ''{{.ID}}'' | xargs -I {}  docker stop
         docker system prune --all &&
         docker builder prune &&
         docker system prune --all --volumes'
+```
+
+Removes without prompt
+
+```shell
+alias docker-prune='docker ps -a --format ''{{.ID}}'' | xargs -I {}  docker stop {} &&
+        docker ps -a --format ''{{.ID}}'' | xargs -I {}  docker rm {} &&
+        docker network prune -f &&
+        docker system prune --all -f &&
+        docker builder prune -f &&
+        docker system prune --all --volumes -f'
 ```
 
 ## Git Pull all Root projects
