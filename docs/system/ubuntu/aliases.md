@@ -59,3 +59,10 @@ alias git-re-tag='_git-re-tag() {
                    git push --tags &&
                    git pull --prune --tags }; _git-re-tag'
 ```
+
+## Update all pip dependencies
+
+```shell
+alias pip-upgrade='pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U'
+```
+>Credits: [How To Update All Python Packages](https://www.activestate.com/resources/quick-reads/how-to-update-all-python-packages/)
