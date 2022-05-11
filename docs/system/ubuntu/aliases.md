@@ -67,12 +67,3 @@ alias pip-upgrade='pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -
 ```
 >Credits: [How To Update All Python Packages](https://www.activestate.com/resources/quick-reads/how-to-update-all-python-packages/)
 
-
-## Fix Pip
-
-```shell
-alias fix-pip='curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py &&
-                python get-pip.py --force-reinstall'
-```
-
->Credits: [Pip is not working: ImportError: No module named 'pip._internal'](https://askubuntu.com/questions/1025189/pip-is-not-working-importerror-no-module-named-pip-internal)
