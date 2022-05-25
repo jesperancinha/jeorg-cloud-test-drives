@@ -1,6 +1,6 @@
 # XORG Config handling issues
 
-## sudo rm /usr/share/X11/xorg.conf.d/*
+## Accidental run of: `sudo rm /usr/share/X11/xorg.conf.d/*`
 
 Sometimes we go to far and we accidentally remove what we shouldn't. With these steps, you'll be able to recover you Ubuntu machine easily if your experience:
 
