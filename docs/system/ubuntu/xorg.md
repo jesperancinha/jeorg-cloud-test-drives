@@ -23,3 +23,22 @@ Then you need to type in these commands:
 
 - [Keyboard and mouse doesn't work after accidental deletion of xorg.conf.d](https://unix.stackexchange.com/questions/389989/keyboard-and-mouse-doesnt-work-after-accidental-deletion-of-xorg-conf-d)
 
+## The second monitor just disappeard
+
+Yeah, Ubuntu can do this if your monitor is unstable enough. The only thing you can do to recover one or more monitors is to activate them via a `xrandr` command.
+
+1. `xand` -> This will list all your monitors:
+
+```text
+eDP-1 connected primary 1920x1080+0+0 (normal left inverted right x axis y axis) 309mm x 174mm
+DP-1 connected (normal left inverted right x axis y axis)
+   1920x1080     60.00 +  74.97    50.00    59.94  
+HDMI-1 disconnected (normal left inverted right x axis y axis)
+DP-2 disconnected (normal left inverted right x axis y axis)
+HDMI-2 disconnected (normal left inverted right x axis y axis)
+```
+
+In this example, we have three monitors: `eDP-1`, `DP-1` and `DP-2`. You need to find out the monitors you need to activate. Ubuntu keeps a record of them. Once you know the name of the monitors, you can use that in the next step
+
+2. `xrandr --output DP-2 --auto` -> You can activate your monitors this way.
+
