@@ -23,7 +23,7 @@ Then you need to type in these commands:
 
 ## The second monitor just disappeard
 
-Yeah, Ubuntu can do this if your monitor is unstable enough. The only thing you can do to recover one or more monitors is to activate them via a `xrandr` command.
+Yeah, Ubuntu can do this if your monitor is unstable enough. One thing you can do to recover one or more monitors is to activate them via a `xrandr` command.
 
 1. `xrandr` -> This will list all your monitors:
 
