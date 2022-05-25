@@ -19,9 +19,7 @@ Then you need to type in these commands:
 
 3. Restart your machine.
 
-## References
-
-- [Keyboard and mouse doesn't work after accidental deletion of xorg.conf.d](https://unix.stackexchange.com/questions/389989/keyboard-and-mouse-doesnt-work-after-accidental-deletion-of-xorg-conf-d)
+---
 
 ## The second monitor just disappeard
 
@@ -42,3 +40,8 @@ In this example, we have three monitors: `eDP-1`, `DP-1` and `DP-2`. You need to
 
 2. `xrandr --output DP-2 --auto` -> You can activate your monitors this way.
 
+---
+
+## References
+
+- [Keyboard and mouse doesn't work after accidental deletion of xorg.conf.d](https://unix.stackexchange.com/questions/389989/keyboard-and-mouse-doesnt-work-after-accidental-deletion-of-xorg-conf-d)
