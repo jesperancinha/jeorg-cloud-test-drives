@@ -25,7 +25,7 @@ Then you need to type in these commands:
 
 Yeah, Ubuntu can do this if your monitor is unstable enough. The only thing you can do to recover one or more monitors is to activate them via a `xrandr` command.
 
-1. `xand` -> This will list all your monitors:
+1. `xrandr` -> This will list all your monitors:
 
 ```text
 eDP-1 connected primary 1920x1080+0+0 (normal left inverted right x axis y axis) 309mm x 174mm
