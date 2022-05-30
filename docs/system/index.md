@@ -12,7 +12,7 @@
 1. [Ubuntu](./ubuntu/index.md)
    1. [Ubuntu Chrome](./ubuntu-chrome/index.md)
    2. [Ubuntu Aliases](./ubuntu/aliases.md)
-   3. [XOG handling](./ubuntu/xorg.md)
+   3. [XORG handling](./ubuntu/xorg.md)
 2. [Mac-OS](./macos/index.md)
 3. [Windows](./windows/index.md)
 
