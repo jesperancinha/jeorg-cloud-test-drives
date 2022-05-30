@@ -15,6 +15,8 @@ for network in $(docker network ls | awk '{print $2}' | grep -v bridge | grep -v
 done
 ```
 
+---
+
 #### 2. Removes all docker containers and networks
 
 Removes with prompt
@@ -28,6 +30,8 @@ alias docker-prune='docker ps -a --format ''{{.ID}}'' | xargs -I {}  docker stop
         docker system prune --all --volumes'
 ```
 
+---
+
 Removes without prompt
 
 ```shell
@@ -39,6 +43,8 @@ alias docker-prune='docker ps -a --format ''{{.ID}}'' | xargs -I {}  docker stop
         docker system prune --all --volumes -f'
 ```
 
+---
+
 ## Git Pull all Root projects
 
 ```shell
@@ -48,6 +54,8 @@ alias git-pull='for f in *; do
     fi
 done'
 ```
+
+---
 
 ## Git re-tag
 
@@ -60,6 +68,8 @@ alias git-re-tag='_git-re-tag() {
                    git pull --prune --tags }; _git-re-tag'
 ```
 
+---
+
 ## Update all pip dependencies
 
 ```shell
@@ -67,3 +77,8 @@ alias pip-upgrade='pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -
 ```
 >Credits: [How To Update All Python Packages](https://www.activestate.com/resources/quick-reads/how-to-update-all-python-packages/)
 
+## Activate all monitors
+
+```shell
+alias monitors-up=`'xrandr | grep DP | cut -d' ' -f1 | xargs -I {} xrandr --output {} --auto'
+```
