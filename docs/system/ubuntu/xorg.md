@@ -39,6 +39,8 @@ HDMI-2 disconnected (normal left inverted right x axis y axis)
 In this example, we have three monitors: `eDP-1`, `DP-1` and `DP-2`. You need to find out the monitors you need to activate. Ubuntu keeps a record of them. Once you know the name of the monitors, you can use that in the next step
 
 2. `xrandr --output DP-2 --auto` -> You can activate your monitors this way.
+3. (optional) `xrandr | grep DP | cut -d' ' -f1 | xargs -I {} xrandr --output {} --auto` -> Activate all DP monitors this way
+4. Restart System
 
 ---
 
