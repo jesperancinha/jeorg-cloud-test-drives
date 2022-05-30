@@ -78,7 +78,7 @@ alias pip-upgrade='pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -
 ## Activate all monitors
 
 ```shell
-alias monitors-up='xrandr | grep DP | cut -d' ' -f1 | xargs -I {} xrandr --output {} --auto'
+alias monitors-up='xrandr | grep DP | cut -d" " -f1 | xargs -I {} xrandr --output {} --auto'
 ```
 
 ---
