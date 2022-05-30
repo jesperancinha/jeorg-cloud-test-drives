@@ -80,3 +80,11 @@ alias pip-upgrade='pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -
 ```shell
 alias monitors-up='xrandr | grep DP | cut -d' ' -f1 | xargs -I {} xrandr --output {} --auto'
 ```
+
+---
+
+## Quick Maven Build
+
+```shell
+alias mvn-quick='mvn clean install -Dskip.dependency.check=true -Dmaven.test.skip=true'
+```
