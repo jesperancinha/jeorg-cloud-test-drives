@@ -1,5 +1,7 @@
 # Ubuntu Aliases
 
+---
+
 ## Prune Docker Container and Images
 
 >NOTE: For correct usage of the commands bellow, please check the source [aliases.md](https://github.com/jesperancinha/jeorg-cloud-test-drives/blob/main/docs/system/ubuntu/aliases.md) file directly.
@@ -15,8 +17,6 @@ for network in $(docker network ls | awk '{print $2}' | grep -v bridge | grep -v
 done
 ```
 
----
-
 #### 2. Removes all docker containers and networks
 
 Removes with prompt
@@ -29,8 +29,6 @@ alias docker-prune='docker ps -a --format ''{{.ID}}'' | xargs -I {}  docker stop
         docker builder prune &&
         docker system prune --all --volumes'
 ```
-
----
 
 Removes without prompt
 
