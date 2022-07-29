@@ -97,6 +97,13 @@ It may become a surprie to you (or not...) that docker can sometimes break up yo
 ```shell
 docker network prune
 ```
+## Turn displays on
+
+```shell
+xrandr --auto
+```
+
+>If this doesn't work, please check the more extended command sequence [here](./aliases.md).
 
 ## Aliases
 
