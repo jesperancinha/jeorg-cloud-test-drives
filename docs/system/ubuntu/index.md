@@ -105,6 +105,16 @@ xrandr --auto
 
 >If this doesn't work, please check the more extended command sequence [here](./aliases.md).
 
+## KDE Not being installed
+
+Try using tasksel:
+
+```bash
+sudo apt install tasksel -y
+tasksel
+```
+From the menu, just chose your chosen KDE distribution.
+
 ## Aliases
 
 There are several handy aliases that we can make. The most useful that I've used can be seen [here](./aliases.md).
