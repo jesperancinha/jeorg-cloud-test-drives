@@ -28,7 +28,7 @@ alias docker-prune='docker ps -a --format ''{{.ID}}'' | xargs -I {}  docker stop
         docker system prune --all &&
         docker builder prune &&
         docker system prune --all --volumes &&
-        docker volume rm $(docker volume ls -qf dangling=true)'
+        docker volume ls -qf dangling=true | xargs -I {} docker volume rm  {}'
 ```
 
 Removes without prompt
