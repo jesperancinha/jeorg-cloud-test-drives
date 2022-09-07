@@ -115,6 +115,15 @@ tasksel
 ```
 From the menu, just chose your chosen KDE distribution.
 
+## Too many files opened on Cypress and related errors
+
+Cypress uses file notifications and listeners on a massive scale. In their issue number [16849](https://github.com/cypress-io/cypress/issues/16849), they describe a working solution:
+
+1. Go to file `/etc/sysctl.conf` on your system
+
+2. Double your `fs.inotify.max_user_instances` (i.e. `fs.inotify.max_user_instances = 256`). If this parameter does not exist, please add it.
+
+
 ## Aliases
 
 There are several handy aliases that we can make. The most useful that I've used can be seen [here](./aliases.md).
