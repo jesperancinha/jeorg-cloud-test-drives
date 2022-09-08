@@ -86,7 +86,11 @@ sudo apt install jq -y
 sudo apt install npm -y
 sudo apt install zsh -y
 sudo apt-get install fonts-powerline -y
-sudo apt-get install yarn -y
+
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt install yarn
+
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update -y
 sudo apt install brave-browser -y
