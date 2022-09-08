@@ -162,6 +162,8 @@ echo "- Python installs complete!"
 sudo apt upgrade -y
 sudo apt update -y
 
+sudo usermod -aG docker $USER
+
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk install java 11.0.11.hs-adpt
