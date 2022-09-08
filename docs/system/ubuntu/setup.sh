@@ -86,6 +86,7 @@ sudo apt install jq -y
 sudo apt install npm -y
 sudo apt install zsh -y
 sudo apt-get install fonts-powerline -y
+sudo apt-get install yarn -y
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update -y
 sudo apt install brave-browser -y
