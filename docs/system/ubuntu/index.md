@@ -128,6 +128,10 @@ Cypress uses file notifications and listeners on a massive scale. In their issue
 
 There are several handy aliases that we can make. The most useful that I've used can be seen [here](./aliases.md).
 
+## DNS Issues
+
+For DNS Issues I have created a whole document about it here [DNS R&D](./dns/Readme.md).
+
 ## References
 
 -   [Regularly getting ERR_NETWORK_CHANGED errors in Chrome](https://superuser.com/questions/747735/regularly-getting-err-network-changed-errors-in-chrome)
