@@ -11,7 +11,7 @@ The problem resolution can depend on several factors:
 1. The Kernel version
 2. The System
 3. The CPU
-4. The intalled software
+4. The installed software
 5. Anything else.
 
 ## Solution
