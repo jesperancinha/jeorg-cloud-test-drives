@@ -61,8 +61,8 @@ cat /etc/dhcp/dhclient.conf
 cat /etc/resolv.conf
 
 # Restart elements
-sudo dhclient
 sudo netplan apply
+sudo dhclient
 sudo resolvectl flush-caches
 resolvectl dns
 sudo systemctl restart resolvconf
