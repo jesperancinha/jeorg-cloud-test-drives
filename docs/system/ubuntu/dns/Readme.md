@@ -41,6 +41,11 @@ sudo rm /etc/resolv.conf
 sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
 systemctl restart resolvconf
 
+# An alternative solution presented and distributed around the Blogs and Posts.
+sudo rm /etc/resolv.conf
+sudo cp /run/systemd/resolve/resolv.conf /etc/resolv.conf
+systemctl restart resolvconf
+
 # A list of files that can be edited to configure the DNS servers
 # Check the examples folder for examples. If the example is not available it just means that I did not change the original file in any way.
 sudo vim /etc/systemd/resolved.conf
