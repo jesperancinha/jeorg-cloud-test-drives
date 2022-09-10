@@ -78,7 +78,28 @@ sudo systemctl restart nscd
 sudo systemctl restart bind9.service
 ```
 
-sudo dpkg-reconfigure resolvconf
+## Solution
+
+Although the above may help you, the actual solution for me was to:
+
+- Disable IPv6 configurations:
+
+```shell
+sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+```
+
+- Reconfigure Resolvconf
+
+```shell
+sudo dpkg-reconfigure resolvconf:
+```
+
+- Remove Docker networks
+
+```shell
+docker network prune
+```
 
 ## Warnings
 
