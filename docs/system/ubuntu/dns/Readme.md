@@ -34,6 +34,7 @@ sudo apt install resolvconf
 sudo apt install dnsutils
 sudo apt install dnsmasq
 sudo apt install nscd
+sudo apt install bind9
 
 # A solution presented and distributed around the Blogs and Posts.
 sudo rm /etc/resolv.conf
@@ -69,6 +70,7 @@ sudo systemctl restart resolvconf
 sudo systemctl restart NetworkManager
 sudo systemctl restart nscd
 /etc/init.d/dnsmasq start
+sudo systemctl restart bind9.service
 ```
 
 ## Warnings
