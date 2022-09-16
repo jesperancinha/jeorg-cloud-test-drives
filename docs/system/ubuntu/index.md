@@ -123,6 +123,12 @@ Cypress uses file notifications and listeners on a massive scale. In their issue
 
 2. Double your `fs.inotify.max_user_instances` (i.e. `fs.inotify.max_user_instances = 256`). If this parameter does not exist, please add it.
 
+If this doesn't work, then you can try this:
+
+```shell
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+cat /proc/sys/fs/inotify/max_user_watches
+```
 
 ## Aliases
 
