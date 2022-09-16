@@ -130,6 +130,8 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo s
 cat /proc/sys/fs/inotify/max_user_watches
 ```
 
+[source](https://stackoverflow.com/questions/55763428/react-native-error-enospc-system-limit-for-number-of-file-watchers-reached)
+
 ## Aliases
 
 There are several handy aliases that we can make. The most useful that I've used can be seen [here](./aliases.md).
