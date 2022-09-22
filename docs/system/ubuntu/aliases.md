@@ -89,3 +89,17 @@ alias monitors-up='xrandr | grep DP | cut -d" " -f1 | xargs -I {} xrandr --outpu
 ```shell
 alias mvn-quick='mvn clean install -Dskip.dependency.check=true -Dmaven.test.skip=true'
 ```
+
+## Docker
+
+#### 1. stop all containers
+
+```shell
+alias docker-stop-all='docker ps -a --format '{{.ID}}' | xargs -I {}  docker stop {}'
+```
+
+#### 2. remove all containers
+
+```shell
+alias docker-rm-all='docker ps -a --format '{{.ID}}' | xargs -I {}  docker rm {}'
+```
