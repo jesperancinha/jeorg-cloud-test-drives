@@ -130,6 +130,11 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo s
 cat /proc/sys/fs/inotify/max_user_watches
 ```
 
+```shell
+echo fs.inotify.max_user_watches=8192 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+cat /proc/sys/fs/inotify/max_user_watches
+```
+
 [source](https://stackoverflow.com/questions/55763428/react-native-error-enospc-system-limit-for-number-of-file-watchers-reached)
 
 ## Aliases
