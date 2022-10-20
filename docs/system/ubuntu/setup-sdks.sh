@@ -5,6 +5,7 @@ sdk install java 12.0.2.hs-adpt
 sdk install java 16.0.1.hs-adpt
 sdk install java 17.0.4.1-zulu
 sdk install java 18.0.2-open
+sdk install java 22.2.r17-grl
 
 echo "" >> ~/.zshrc
 echo alias jdk8="sdk use java 8.0.302-open" >> ~/.zshrc
