@@ -25,5 +25,6 @@ alias jdk12=sdk use java 12.0.2.hs-adpt
 alias jdk16=sdk use java 16.0.1.hs-adpt
 alias jdk17=sdk use java 17.0.4.1-zulu
 alias jdk18=sdk use java 18.0.2-open
+alias graalVM=sdk use java 22.2.r17-grl
 
 export ANDROID_HOME=/home/$(whoami)/Android/Sdk
