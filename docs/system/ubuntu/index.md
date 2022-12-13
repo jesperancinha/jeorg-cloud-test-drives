@@ -212,6 +212,13 @@ There are several handy aliases that we can make. The most useful that I've used
 
 For DNS Issues I have created a whole document about it here [DNS R&D](./dns/Readme.md).
 
+## Firmware upgrade
+
+```shell
+sudo service fwupd start
+sudo fwupdmgr refresh
+```
+
 ## References
 
 -   [Regularly getting ERR_NETWORK_CHANGED errors in Chrome](https://superuser.com/questions/747735/regularly-getting-err-network-changed-errors-in-chrome)
