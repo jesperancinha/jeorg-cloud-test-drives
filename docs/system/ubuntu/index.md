@@ -217,6 +217,7 @@ For DNS Issues I have created a whole document about it here [DNS R&D](./dns/Rea
 ```shell
 sudo service fwupd start
 sudo fwupdmgr refresh
+sudo fwupdmgr get-devices
 ```
 
 ## References
