@@ -231,6 +231,7 @@ sudo tlp start
 
 ## References
 
+-   [12 Killer Tips To Speed Up Ubuntu Linux](https://itsfoss.com/speed-up-ubuntu-1310/)
 -   [Regularly getting ERR_NETWORK_CHANGED errors in Chrome](https://superuser.com/questions/747735/regularly-getting-err-network-changed-errors-in-chrome)
 -   [Powerline Fonts](https://github.com/powerline/fonts)
 -   [ohmyzsh on GitHub](https://github.com/ohmyzsh/ohmyzsh)
