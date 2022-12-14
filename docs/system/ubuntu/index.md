@@ -221,6 +221,14 @@ sudo fwupdmgr get-devices
 sudo fwupdmgr update
 ```
 
+## Speed up computer by controlling heat surges
+
+```shell
+sudo apt update
+sudo apt install tlp tlp-rdw
+sudo tlp start
+```
+
 ## References
 
 -   [Regularly getting ERR_NETWORK_CHANGED errors in Chrome](https://superuser.com/questions/747735/regularly-getting-err-network-changed-errors-in-chrome)
