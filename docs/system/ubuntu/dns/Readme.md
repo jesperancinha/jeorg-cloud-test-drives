@@ -111,7 +111,7 @@ Only remove `network-manager` if you `REALLY` `REALLY` have to! You may be led t
 
 Removing the `network-manager` could nonetheless be a good idea if everything else fails. Just be sure to have the means to install it again. For example a mobile phone or an usb-drive with the correct saved distribution.
 
-## About me 👨🏽‍💻🚀🏳️‍🌈
+## About me
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
 [![GitHub followers](https://img.shields.io/github/followers/jesperancinha.svg?label=Jesperancinha&style=social "GitHub")](https://github.com/jesperancinha)
