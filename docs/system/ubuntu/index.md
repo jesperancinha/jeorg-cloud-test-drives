@@ -229,8 +229,26 @@ sudo apt install tlp tlp-rdw
 sudo tlp start
 ```
 
+#### Expired Keys
+
+```shell
+sudo apt-key list  | grep "expired: " | sed -ne 's|pub .*/\([^ ]*\) .*|\1|gp' | xargs -n1 sudo apt-key adv --keyserver keys.gnupg.net --recv-keys \n
+sudo apt-get update
+sudo apt-key list | grep "expired: "
+sudo apt-get update
+sudo apt-key list\n
+sudo apt-key adv --refresh-keys
+sudo apt-get update
+sudo apt-key adv --keyserver hkps://keyserver.ubuntu.com --refresh-keys\n
+sudo apt-get update
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <MISSING_KEY>
+sudo apt-get update
+```
+
 ## References
 
+-   [Key Not Available Fix](https://chrisjean.com/fix-apt-get-update-the-following-signatures-couldnt-be-verified-because-the-public-key-is-not-available/)
+-   [Key Expired Fix](https://askubuntu.com/questions/650032/gpg-errorthe-following-signatures-were-invalid-keyexpired)
 -   [12 Killer Tips To Speed Up Ubuntu Linux](https://itsfoss.com/speed-up-ubuntu-1310/)
 -   [Regularly getting ERR_NETWORK_CHANGED errors in Chrome](https://superuser.com/questions/747735/regularly-getting-err-network-changed-errors-in-chrome)
 -   [Powerline Fonts](https://github.com/powerline/fonts)
