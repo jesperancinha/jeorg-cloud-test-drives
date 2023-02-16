@@ -243,10 +243,12 @@ sudo apt-key adv --keyserver hkps://keyserver.ubuntu.com --refresh-keys\n
 sudo apt-get update
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <MISSING_KEY>
 sudo apt-get update
+sudo cp /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
 ```
 
 ## References
 
+-   [Legacy Key Storage](https://itsfoss.com/key-is-stored-in-legacy-trusted-gpg/)
 -   [Key Not Available Fix](https://chrisjean.com/fix-apt-get-update-the-following-signatures-couldnt-be-verified-because-the-public-key-is-not-available/)
 -   [Key Expired Fix](https://askubuntu.com/questions/650032/gpg-errorthe-following-signatures-were-invalid-keyexpired)
 -   [12 Killer Tips To Speed Up Ubuntu Linux](https://itsfoss.com/speed-up-ubuntu-1310/)
