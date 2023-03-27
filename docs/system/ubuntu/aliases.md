@@ -109,6 +109,10 @@ alias monitors-up='xrandr | grep DP | cut -d" " -f1 | xargs -I {} xrandr --outpu
 alias keep-playing='pactl unload-module module-role-cork'
 ```
 
+#### References
+
+-   https://community.spotify.com/t5/Desktop-Linux/Spotify-mutes-itself-when-system-sounds-play-SOLUTION/td-p/4581978
+
 ---
 
 ## Quick Maven Build
