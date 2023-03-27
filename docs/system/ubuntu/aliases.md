@@ -90,6 +90,23 @@ done'
 
 ---
 
+## Git Resolve all dependencies from the projects root
+
+```shell
+alias git-resolve='for f in *; do
+    if [ -d "$f" ]; then
+        cd $f
+        git pull && git fetch -p && git pull --tags
+        if [ -f "pom.xml" ]; then
+            mvn dependency:resolve
+        fi
+        cd ..
+    fi
+done'
+```
+
+---
+
 ## Git re-tag
 
 ```shell
