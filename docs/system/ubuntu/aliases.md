@@ -101,6 +101,16 @@ alias monitors-up='xrandr | grep DP | cut -d" " -f1 | xargs -I {} xrandr --outpu
 
 ---
 
+## Keep Playing
+
+> This allows any audio player to keep playing in spite of system notifications
+
+```shell
+alias keep-playing='pactl unload-module module-role-cork'
+```
+
+---
+
 ## Quick Maven Build
 
 ```shell
