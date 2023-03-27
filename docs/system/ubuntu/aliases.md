@@ -81,6 +81,7 @@ alias git-build-failsafe-skip='for f in *; do
         cd $f
         git pull && git fetch -p && git pull --tags
         if [ -f "pom.xml" ]; then
+            mvn clean install -Dskip.integration.tests=true
         fi
         cd ..
     fi
