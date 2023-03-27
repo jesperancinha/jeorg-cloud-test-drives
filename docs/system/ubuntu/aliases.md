@@ -73,6 +73,22 @@ done'
 
 ---
 
+## Git build all Root projects with Failsafe skip
+
+```shell
+alias git-build-failsafe-skip='for f in *; do
+    if [ -d "$f" ]; then
+        cd $f
+        git pull && git fetch -p && git pull --tags
+        if [ -f "pom.xml" ]; then
+        fi
+        cd ..
+    fi
+done'
+```
+
+---
+
 ## Git re-tag
 
 ```shell
