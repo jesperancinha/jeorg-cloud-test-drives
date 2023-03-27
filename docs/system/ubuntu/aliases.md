@@ -61,7 +61,7 @@ done'
 ```shell
 alias git-build='for f in *; do
     if [ -d "$f" ]; then
-        cd $f && git pull && git fetch -p && git pull --tags && mvn clean install -Dskip.dependency.check=true -Dmaven.test.skip=true cd ..
+        cd $f && git pull && git fetch -p && git pull --tags && mvn clean install -Dskip.dependency.check=true -Dmaven.test.skip=true && cd ..
     fi
 done'
 ```
