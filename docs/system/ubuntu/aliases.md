@@ -168,3 +168,41 @@ alias docker-stop-all='docker ps -a --format '{{.ID}}' | xargs -I {}  docker sto
 ```shell
 alias docker-rm-all='docker ps -a --format '{{.ID}}' | xargs -I {}  docker rm {}'
 ```
+
+## Upgrades
+
+## Upgrade Everything
+
+```shell
+alias upgrade-all='sudo apt upgrade
+	sudo apt update
+	export SDKMAN_DIR="$(HOME)/.sdkman"; \
+	[[ -s "$(HOME)/.sdkman/bin/sdkman-init.sh" ]]; \
+	source "$(HOME)/.sdkman/bin/sdkman-init.sh"; \
+	sdk update; \
+	sbtVersion=$(shell sbt --version |  tr '\n' ' ' | cut -f6 -d' '); \
+	if [[ -z "$$sbtVersion" ]]; then \
+		sdk install sbt $(SBT_VERSION); \
+		sdk use gradle $(SBT_VERSION); \
+	else \
+		(yes "" 2>/dev/null || true) | sdk install sbt; \
+	fi; \
+	export SBT_VERSION=$(shell sbt --version |  tr '\n' ' ' | cut -f6 -d' '); \
+    sudo apt upgrade; \
+	sudo apt update; \
+	export SDKMAN_DIR="$(HOME)/.sdkman"; \
+	[[ -s "$(HOME)/.sdkman/bin/sdkman-init.sh" ]]; \
+	source "$(HOME)/.sdkman/bin/sdkman-init.sh"; \
+	sdk update; \
+	gradleOnlineVersion=$(shell curl -s https://services.gradle.org/versions/current | jq .version | xargs -I {} echo {}); \
+	if [[ -z "$$gradleOnlineVersion" ]]; then \
+		sdk install gradle $(GRADLE_VERSION); \
+		sdk use gradle $(GRADLE_VERSION); \
+	else \
+		sdk install gradle $$gradleOnlineVersion; \
+		sdk use gradle $$gradleOnlineVersion; \
+		export GRADLE_VERSION=$$gradleOnlineVersion; \
+	fi; \
+    sudo apt upgrade; \
+	sudo apt update;'
+```
