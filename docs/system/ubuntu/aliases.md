@@ -211,6 +211,7 @@ alias upgrade-all='echo "$(tput setaf 2)Starting upgrade..."; \
   sudo fwupdmgr refresh; \
   fwupdmgr get-updates; \
   fwupdmgr update; \
+  apt list --upgradable -a; \
   echo "$(tput setaf 4)Finished Upgrade!"; \
   '
 ```
