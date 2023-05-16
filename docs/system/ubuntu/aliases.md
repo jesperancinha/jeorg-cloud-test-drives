@@ -175,39 +175,42 @@ alias docker-rm-all='docker ps -a --format '{{.ID}}' | xargs -I {}  docker rm {}
 
 ```shell
 alias upgrade-all='echo "$(tput setaf 2)Starting upgrade..."; \
-    echo "$(tput setaf 7)"; \
-	export SDKMAN_DIR="$HOME/.sdkman"; \
-	[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]]; \
-	source "$HOME/.sdkman/bin/sdkman-init.sh"; \
-	sdk update; \
-	sbtVersion=$(sbt --version | tail -n 1 | cut -f4 -d" "); \
-	if [[ -z "$sbtVersion" ]]; then \
-		sdk install sbt $SBT_VERSION; \
-		sdk use gradle $SBT_VERSION; \
-	else \
-		(yes "" 2>/dev/null || true) | sdk install sbt; \
-	fi; \
-	export SBT_VERSION=$(sbt --version | tail -n 1 | cut -f4 -d" "); \
-	echo "Installed sbt $SBT_VERSION"; \
-	export SDKMAN_DIR="$HOME/.sdkman"; \
-	[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]]; \
-	source "$HOME/.sdkman/bin/sdkman-init.sh"; \
-	sdk update; \
-	gradleOnlineVersion=$(curl -s https://services.gradle.org/versions/current | jq .version | xargs -I {} echo {}); \
-	if [[ -z "$gradleOnlineVersion" ]]; then \
-		sdk install gradle; \
-	else \
-		sdk install gradle $gradleOnlineVersion; \
-		sdk use gradle $gradleOnlineVersion; \
-	fi; \
-	echo "Installed gradle $gradleOnlineVersion"; \
-	sudo apt autoremove; \
-    sudo apt upgrade; \
-	sudo apt update; \
-	sudo service fwupd start; \
-	sudo fwupdmgr refresh; \
-	fwupdmgr get-updates; \
-	fwupdmgr update; \
-	echo "$(tput setaf 4)Finished Upgrade!"; \
-	'
+  echo "$(tput setaf 7)"; \
+  export SDKMAN_DIR="$HOME/.sdkman"; \
+  [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]]; \
+  source "$HOME/.sdkman/bin/sdkman-init.sh"; \
+  sdk update; \
+  sbtVersion=$(sbt --version | tail -n 1 | cut -f4 -d" "); \
+  if [[ -z "$sbtVersion" ]]; then \
+     sdk install sbt $SBT_VERSION; \
+     sdk use gradle $SBT_VERSION; \
+  else \
+     (yes "" 2>/dev/null || true) | sdk install sbt; \
+  fi; \
+  export SBT_VERSION=$(sbt --version | tail -n 1 | cut -f4 -d" "); \
+  echo "Installed sbt $SBT_VERSION"; \
+  export SDKMAN_DIR="$HOME/.sdkman"; \
+  [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]]; \
+  source "$HOME/.sdkman/bin/sdkman-init.sh"; \
+  sdk update; \
+  gradleOnlineVersion=$(curl -s https://services.gradle.org/versions/current | jq .version | xargs -I {} echo {}); \
+  if [[ -z "$gradleOnlineVersion" ]]; then \
+     sdk install gradle; \
+  else \
+     sdk install gradle $gradleOnlineVersion; \
+     sdk use gradle $gradleOnlineVersion; \
+  fi; \
+  echo "Installed gradle $gradleOnlineVersion"; \
+  sudo apt autoremove; \
+  sudo apt upgrade; \
+  sudo apt update; \
+  sudo apt-get dist-upgrade; \
+  sudo apt-get --with-new-pkgs upgrade; \
+  sudo apt autoremove; \
+  sudo service fwupd start; \
+  sudo fwupdmgr refresh; \
+  fwupdmgr get-updates; \
+  fwupdmgr update; \
+  echo "$(tput setaf 4)Finished Upgrade!"; \
+  '
 ```
