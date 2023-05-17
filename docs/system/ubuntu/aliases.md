@@ -232,7 +232,7 @@ However, this never worked for me. This alias, however, did:
 
 ```shell
 alias upgrade-docker-manually='
-    COMPOSE_VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4)
+    COMPOSE_VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4); \
     DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}; \
     mkdir -p $DOCKER_CONFIG/cli-plugins; \
     curl -SL https://github.com/docker/compose/releases/download/$COMPOSE_VERSION/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose; \
