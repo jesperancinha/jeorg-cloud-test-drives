@@ -218,3 +218,29 @@ alias upgrade-all='echo "$(tput setaf 2)Starting upgrade..."; \
   echo "$(tput setaf 4)Finished Upgrade!"; \
   '
 ```
+
+## Docker update
+
+From the [documentation](https://docs.docker.com/compose/install/linux/#install-using-the-repository), we see that it is easy as:
+
+```shell
+sudo apt-get update
+sudo apt-get install docker-compose-plugin
+```
+
+However, this never worked for me. This alias, however, did:
+
+```shell
+alias upgrade-docker-manually='
+    COMPOSE_VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4)
+    DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}; \
+    mkdir -p $DOCKER_CONFIG/cli-plugins; \
+    curl -SL https://github.com/docker/compose/releases/download/$COMPOSE_VERSION/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose; \
+    chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose;
+  '
+```
+
+References:
+
+-   [How to upgrade docker-compose to latest version](https://stackoverflow.com/questions/49839028/how-to-upgrade-docker-compose-to-latest-version)
+-   [GIST deviantony/install-latest-compose.sh](https://gist.github.com/deviantony/2b5078fe1675a5fedabf1de3d1f2652a)
