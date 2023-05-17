@@ -206,6 +206,8 @@ alias upgrade-all='echo "$(tput setaf 2)Starting upgrade..."; \
   sudo apt update; \
   sudo apt-get dist-upgrade; \
   sudo apt-get --with-new-pkgs upgrade; \
+  sudo apt upgrade --fix-missing; \
+  sudo apt update --fix-missing; \
   sudo apt install fwupd; \
   sudo apt autoremove; \
   sudo service fwupd start; \
