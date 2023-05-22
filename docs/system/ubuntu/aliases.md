@@ -249,7 +249,17 @@ alias upgrade-docker-manually='
     '
 ```
 
+
 References:
 
 -   [How to upgrade docker-compose to latest version](https://stackoverflow.com/questions/49839028/how-to-upgrade-docker-compose-to-latest-version)
 -   [GIST deviantony/install-latest-compose.sh](https://gist.github.com/deviantony/2b5078fe1675a5fedabf1de3d1f2652a)
+
+## Temporarily add Google DNS server
+
+```shell
+sudo echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
+```
+
+References:
+-   [ask Ubuntu](https://askubuntu.com/questions/91543/apt-get-update-fails-to-fetch-files-temporary-failure-resolving-error)
