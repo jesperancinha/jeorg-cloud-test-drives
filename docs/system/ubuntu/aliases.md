@@ -315,6 +315,8 @@ alias upgrade-all-overseer='echo "$(tput setaf 2)Starting upgrade..."; \
   curl -SL https://github.com/docker/compose/releases/download/$DOCKER_COMPOSE_VERSION/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose; \
   chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose;
   apt list --upgradable -a; \
+  sudo apt list --upgradable | cut -f1 -d'/' | xargs -I {} sudo apt-get upgrade {} -y; \
+  apt list --upgradable -a; \
   echo "$(tput setaf 4)Finished Upgrade!"; \
   '
 ```
