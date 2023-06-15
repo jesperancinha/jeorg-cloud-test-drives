@@ -321,6 +321,14 @@ alias upgrade-all-overseer='echo "$(tput setaf 2)Starting upgrade..."; \
   '
 ```
 
+## Git Push Tags and Final
+
+```shell
+alias git-tags-push='git push --tags; \
+    git push;
+    '
+```
+
 
 ## Temporarily add Google DNS server
 
