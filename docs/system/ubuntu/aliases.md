@@ -333,8 +333,14 @@ alias git-tags-push='git push --tags; \
 ## Temporarily add Google DNS server
 
 ```shell
-sudo echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
+alias google-dns='sudo echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null'
 ```
 
 References:
 -   [ask Ubuntu](https://askubuntu.com/questions/91543/apt-get-update-fails-to-fetch-files-temporary-failure-resolving-error)
+
+## Update drivers
+
+```shell
+alias update-drivers='sudo ubuntu-drivers autoinstall'
+```

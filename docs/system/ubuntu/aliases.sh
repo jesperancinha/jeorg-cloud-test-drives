@@ -108,3 +108,5 @@ alias upgrade-docker-manually='
     '
 
 alias keep-playing='pactl unload-module module-role-cork'
+alias update-drivers='sudo ubuntu-drivers autoinstall'
+alias google-dns='sudo echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null'
