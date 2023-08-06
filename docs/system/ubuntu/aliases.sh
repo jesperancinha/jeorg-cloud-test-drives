@@ -58,15 +58,15 @@ alias upgrade-all-overseer='echo "$(tput setaf 2)Starting upgrade..."; \
      sdk use gradle $gradleOnlineVersion; \
   fi; \
   echo "Installed gradle $gradleOnlineVersion"; \
-  sudo apt autoremove; \
-  sudo apt upgrade; \
-  sudo apt update; \
-  sudo apt-get dist-upgrade; \
-  sudo apt-get --with-new-pkgs upgrade; \
-  sudo apt upgrade --fix-missing; \
-  sudo apt update --fix-missing; \
-  sudo apt install fwupd; \
-  sudo apt autoremove; \
+  sudo apt autoremove -y; \
+  sudo apt upgrade -y; \
+  sudo apt update -y; \
+  sudo apt-get dist-upgrade -y; \
+  sudo apt-get --with-new-pkgs upgrade -y; \
+  sudo apt upgrade --fix-missing -y; \
+  sudo apt update --fix-missing -y; \
+  sudo apt install fwupd -y; \
+  sudo apt autoremove -y; \
   sudo service fwupd start; \
   sudo fwupdmgr refresh; \
   fwupdmgr get-updates; \
@@ -90,3 +90,21 @@ alias upgrade-all-overseer='echo "$(tput setaf 2)Starting upgrade..."; \
   echo "$(tput setaf 4)Finished Upgrade!"; \
   '
 
+alias upgrade-docker-manually='
+    echo "$(tput setaf 2)Starting upgrade from docker-compose version $(docker-compose -v | tail -n 1)"; \
+    echo "If DOCKER_COMPOSE_VERSION env variable is not given, this upgrade will install the latest version"; \
+    if [[ -z "$DOCKER_COMPOSE_VERSION" ]]; then \
+        DOCKER_COMPOSE_VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4); \
+    else \
+        echo "$(tput setaf 1)DOCKER_COMPOSE_VERSION not given. Upgrading to latest available version..."; \
+    fi; \
+    echo "$(tput setaf 2)Installing version $DOCKER_COMPOSE_VERSION of docker-compose"; \
+    echo "$(tput setaf 7)"; \
+    DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}; \
+    mkdir -p $DOCKER_CONFIG/cli-plugins; \
+    curl -SL https://github.com/docker/compose/releases/download/$DOCKER_COMPOSE_VERSION/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose; \
+    chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose;
+    echo "$(tput setaf 4)Finished Upgrade!"; \
+    '
+
+alias keep-playing='pactl unload-module module-role-cork'
