@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-
 alias docker-prune='docker ps -a --format ''{{.ID}}'' | xargs -I {}  docker stop {} &&
         docker ps -a --format ''{{.ID}}'' | xargs -I {}  docker rm {} &&
         docker network prune -f &&
@@ -158,3 +157,12 @@ alias upgrade-docker-manually='
 alias keep-playing='pactl unload-module module-role-cork'
 alias update-drivers='sudo ubuntu-drivers autoinstall'
 alias google-dns='sudo echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null'
+
+alias jdk8='sdk use java 8.0.302-open'
+alias jdk11='sdk use java 11.0.11.hs-adpt'
+alias jdk12='sdk use java 12.0.2.hs-adpt'
+alias jdk16='sdk use java 16.0.1.hs-adpt'
+alias jdk17='sdk use java 17.0.4.1-zulu'
+alias jdk18='sdk use java 18.0.2-open'
+alias jdk19='sdk use java 19.0.2-open'
+alias jdk20='sdk use java 20.0.1-open'
