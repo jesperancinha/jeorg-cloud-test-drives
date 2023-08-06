@@ -201,15 +201,16 @@ alias upgrade-all='echo "$(tput setaf 2)Starting upgrade..."; \
      sdk use gradle $gradleOnlineVersion; \
   fi; \
   echo "Installed gradle $gradleOnlineVersion"; \
-  sudo apt autoremove; \
-  sudo apt upgrade; \
-  sudo apt update; \
-  sudo apt-get dist-upgrade; \
-  sudo apt-get --with-new-pkgs upgrade; \
-  sudo apt upgrade --fix-missing; \
-  sudo apt update --fix-missing; \
-  sudo apt install fwupd; \
-  sudo apt autoremove; \
+  sudo apt autoremove -y; \
+  sudo apt upgrade -y; \
+  sudo apt update -y; \
+  sudo apt-get dist-upgrade -y; \
+  sudo apt-get --with-new-pkgs upgrade -y; \
+  sudo apt upgrade --fix-missing -y; \
+  sudo apt update --fix-missing -y; \
+  sudo apt install fwupd -y; \
+  sudo apt autoremove -y; \
+  sudo ubuntu-drivers autoinstall -y; \
   sudo service fwupd start; \
   sudo fwupdmgr refresh; \
   fwupdmgr get-updates; \
@@ -288,15 +289,16 @@ alias upgrade-all-overseer='echo "$(tput setaf 2)Starting upgrade..."; \
      sdk use gradle $gradleOnlineVersion; \
   fi; \
   echo "Installed gradle $gradleOnlineVersion"; \
-  sudo apt autoremove; \
-  sudo apt upgrade; \
-  sudo apt update; \
-  sudo apt-get dist-upgrade; \
-  sudo apt-get --with-new-pkgs upgrade; \
-  sudo apt upgrade --fix-missing; \
-  sudo apt update --fix-missing; \
-  sudo apt install fwupd; \
-  sudo apt autoremove; \
+  sudo apt autoremove -y; \
+  sudo apt upgrade -y; \
+  sudo apt update -y; \
+  sudo apt-get dist-upgrade -y; \
+  sudo apt-get --with-new-pkgs upgrade -y; \
+  sudo apt upgrade --fix-missing -y; \
+  sudo apt update --fix-missing -y; \
+  sudo apt install fwupd -y; \
+  sudo apt autoremove -y; \
+  sudo ubuntu-drivers autoinstall -y; \
   sudo service fwupd start; \
   sudo fwupdmgr refresh; \
   fwupdmgr get-updates; \

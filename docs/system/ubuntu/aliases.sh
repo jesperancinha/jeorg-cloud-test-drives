@@ -6,11 +6,13 @@ alias docker-prune='docker ps -a --format ''{{.ID}}'' | xargs -I {}  docker stop
         docker system prune --all -f &&
         docker builder prune -f &&
         docker system prune --all --volumes -f'
+
 alias git-pull='for f in *; do
   if [ -d "$f" ]; then
       cd $f && git pull && git fetch -p && cd ..
   fi
 done'
+
 alias pip-upgrade='pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U'
 alias monitors-up='xrandr | grep DP | cut -d" " -f1 | xargs -I {} xrandr --output {} --auto && xrandr --auto'
 alias mvn-quick='mvn clean install -Dskip.dependency.check=true -Dmaven.test.skip=true'
@@ -67,6 +69,7 @@ alias upgrade-all-overseer='echo "$(tput setaf 2)Starting upgrade..."; \
   sudo apt update --fix-missing -y; \
   sudo apt install fwupd -y; \
   sudo apt autoremove -y; \
+  sudo ubuntu-drivers autoinstall -y; \
   sudo service fwupd start; \
   sudo fwupdmgr refresh; \
   fwupdmgr get-updates; \
@@ -86,6 +89,51 @@ alias upgrade-all-overseer='echo "$(tput setaf 2)Starting upgrade..."; \
   chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose;
   apt list --upgradable -a; \
   sudo apt list --upgradable | cut -f1 -d'/' | xargs -I {} sudo apt-get upgrade {} -y; \
+  apt list --upgradable -a; \
+  echo "$(tput setaf 4)Finished Upgrade!"; \
+  '
+
+alias upgrade-all='echo "$(tput setaf 2)Starting upgrade..."; \
+  echo "$(tput setaf 7)"; \
+  export SDKMAN_DIR="$HOME/.sdkman"; \
+  [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]]; \
+  source "$HOME/.sdkman/bin/sdkman-init.sh"; \
+  sdk update; \
+  sbtVersion=$(sbt --version | tail -n 1 | cut -f4 -d" "); \
+  if [[ -z "$sbtVersion" ]]; then \
+     sdk install sbt $SBT_VERSION; \
+     sdk use gradle $SBT_VERSION; \
+  else \
+     (yes "" 2>/dev/null || true) | sdk install sbt; \
+  fi; \
+  export SBT_VERSION=$(sbt --version | tail -n 1 | cut -f4 -d" "); \
+  echo "Installed sbt $SBT_VERSION"; \
+  export SDKMAN_DIR="$HOME/.sdkman"; \
+  [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]]; \
+  source "$HOME/.sdkman/bin/sdkman-init.sh"; \
+  sdk update; \
+  gradleOnlineVersion=$(curl -s https://services.gradle.org/versions/current | jq .version | xargs -I {} echo {}); \
+  if [[ -z "$gradleOnlineVersion" ]]; then \
+     sdk install gradle; \
+  else \
+     sdk install gradle $gradleOnlineVersion; \
+     sdk use gradle $gradleOnlineVersion; \
+  fi; \
+  echo "Installed gradle $gradleOnlineVersion"; \
+  sudo apt autoremove -y; \
+  sudo apt upgrade -y; \
+  sudo apt update -y; \
+  sudo apt-get dist-upgrade -y; \
+  sudo apt-get --with-new-pkgs upgrade -y; \
+  sudo apt upgrade --fix-missing -y; \
+  sudo apt update --fix-missing -y; \
+  sudo apt install fwupd -y; \
+  sudo apt autoremove -y; \
+  sudo ubuntu-drivers autoinstall -y; \
+  sudo service fwupd start; \
+  sudo fwupdmgr refresh; \
+  fwupdmgr get-updates; \
+  fwupdmgr update; \
   apt list --upgradable -a; \
   echo "$(tput setaf 4)Finished Upgrade!"; \
   '
