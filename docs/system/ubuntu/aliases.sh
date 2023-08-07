@@ -68,7 +68,7 @@ alias upgrade-all-overseer='echo "$(tput setaf 2)Starting upgrade..."; \
   sudo apt update --fix-missing -y; \
   sudo apt install fwupd -y; \
   sudo apt autoremove -y; \
-  sudo ubuntu-drivers autoinstall -y; \
+  sudo ubuntu-drivers autoinstall; \
   sudo service fwupd start; \
   sudo fwupdmgr refresh; \
   fwupdmgr get-updates; \
@@ -128,7 +128,7 @@ alias upgrade-all='echo "$(tput setaf 2)Starting upgrade..."; \
   sudo apt update --fix-missing -y; \
   sudo apt install fwupd -y; \
   sudo apt autoremove -y; \
-  sudo ubuntu-drivers autoinstall -y; \
+  sudo ubuntu-drivers autoinstall; \
   sudo service fwupd start; \
   sudo fwupdmgr refresh; \
   fwupdmgr get-updates; \
