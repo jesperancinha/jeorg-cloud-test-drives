@@ -346,3 +346,11 @@ References:
 ```shell
 alias update-drivers='sudo ubuntu-drivers autoinstall'
 ```
+
+## Fix sound
+
+```shell
+sudo touch /usr/share/pipewire/media-session.d/with-pulseaudio
+systemctl --user restart pipewire-session-manager
+```
+
