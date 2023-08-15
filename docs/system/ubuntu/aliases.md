@@ -364,5 +364,6 @@ systemctl --user restart pipewire-session-manager
 systemctl --user restart pulseaudio
 systemctl --user restart pulseaudio.service
 systemctl --user restart pulseaudio.socket
+pulseaudio -k && sudo alsa force-reload
 ```
 
