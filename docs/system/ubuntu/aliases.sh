@@ -173,7 +173,7 @@ alias sound-reset='
         sudo touch /usr/share/pipewire/media-session.d/with-pulseaudio; \
         sudo apt-get remove --purge alsa-base -y; \
         sudo apt-get remove --purge pulseaudio -y; \
-        sudo apt-get remove --purge pavucontrol -yv
+        sudo apt-get remove --purge pavucontrol -y; \
         sudo apt-get install alsa-base -y; \
         sudo apt-get install pulseaudio -y; \
         sudo apt-get install pavucontrol  -y; \
