@@ -356,9 +356,12 @@ sudo touch /usr/share/pipewire/media-session.d/with-pulseaudio
 sudo apt-get remove --purge alsa-base -y
 sudo apt-get remove --purge pulseaudio -y
 sudo apt-get remove --purge pavucontrol -y
+sudo apt-get --purge remove linux-sound-base alsa-base alsa-utils -y
 sudo apt-get install alsa-base -y
 sudo apt-get install pulseaudio -y
 sudo apt-get install pavucontrol  -y
+sudo apt-get install linux-sound-base alsa-base alsa-utils -y
+sudo apt-get install gdm ubuntu-desktop -y
 sudo alsa force-reload
 systemctl --user restart pipewire-session-manager
 systemctl --user restart pulseaudio
