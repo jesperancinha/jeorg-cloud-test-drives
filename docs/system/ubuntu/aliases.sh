@@ -166,3 +166,20 @@ alias jdk17='sdk use java 17.0.4.1-zulu'
 alias jdk18='sdk use java 18.0.2-open'
 alias jdk19='sdk use java 19.0.2-open'
 alias jdk20='sdk use java 20.0.1-open'
+
+alias sound-reset='
+        sudo apt autoremove; \
+        sudo rm -f ~/.config/pulse/*  
+        sudo touch /usr/share/pipewire/media-session.d/with-pulseaudio; \
+        sudo apt-get remove --purge alsa-base -y; \
+        sudo apt-get remove --purge pulseaudio -y; \
+        sudo apt-get remove --purge pavucontrol -yv
+        sudo apt-get install alsa-base -y; \
+        sudo apt-get install pulseaudio -y; \
+        sudo apt-get install pavucontrol  -y; \
+        sudo alsa force-reload; \
+        systemctl --user restart pipewire-session-manager; \
+        systemctl --user restart pulseaudio; \
+        systemctl --user restart pulseaudio.service; \
+        systemctl --user restart pulseaudio.socket
+'
