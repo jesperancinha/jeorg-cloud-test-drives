@@ -362,5 +362,7 @@ sudo apt-get install pavucontrol  -y
 sudo alsa force-reload
 systemctl --user restart pipewire-session-manager
 systemctl --user restart pulseaudio
+systemctl --user restart pulseaudio.service
+systemctl --user restart pulseaudio.socket
 ```
 
