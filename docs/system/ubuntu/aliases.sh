@@ -6,6 +6,7 @@ alias docker-prune='docker ps -a --format ''{{.ID}}'' | xargs -I {}  docker stop
         docker builder prune -f &&
         docker system prune --all --volumes -f'
 
+# shellcheck disable=SC2154
 alias git-pull='for f in *; do
   if [ -d "$f" ]; then
     if [[ "$f" != "target" && "$f" != "src" ]]; then
