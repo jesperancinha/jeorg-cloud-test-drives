@@ -8,7 +8,9 @@ alias docker-prune='docker ps -a --format ''{{.ID}}'' | xargs -I {}  docker stop
 
 alias git-pull='for f in *; do
   if [ -d "$f" ]; then
+    if [[ "$f" != "target" && "$f" != "src" ]]; then
       cd $f && git pull && git fetch -p && cd ..
+    fi
   fi
 done'
 
