@@ -370,3 +370,8 @@ systemctl --user restart pulseaudio.socket
 pulseaudio -k && sudo alsa force-reload
 ```
 
+## No enough disk space kernel removal
+
+```shell
+sudo dpkg -l | grep linux-image | head -n1 | cut -d" " -f3 | xargs -I {} sudo dpkg --purge {}
+```
