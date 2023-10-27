@@ -87,6 +87,7 @@ sudo apt install unzip -y
 sudo apt install jq -y
 sudo apt install npm -y
 sudo apt install zsh -y
+sudo apt-get install gh -y
 sudo apt-get install fonts-powerline -y
 
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
