@@ -4,4 +4,5 @@ sudo apt-get install kde-full
 sudo apt-get install kde-plasma-desktop 
 kbuildsycoca5 --noincremental
 sudo apt install gnome-tweaks
+sudo apt-get reinstall plasma-workspace
 
