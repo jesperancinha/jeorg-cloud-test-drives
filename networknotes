@@ -2,3 +2,5 @@
 sudo apt-get install plymouth-themes
 sudo apt-get install kde-full
 sudo apt-get install kde-plasma-desktop 
+kbuildsycoca5 --noincremental
+
