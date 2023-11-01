@@ -15,7 +15,7 @@ sudo service sddm start
 
 systemctl start NetworkManager
 nmcli dev wifi
-sudo apt-get install --reinstall dnsmasq
+sudo apt-get install --reinstall dnsmasq --fix-missing
 sudo add-apt-repository --remove ppa:deadsnakes/ppa
 sudo apt-get update
 sudo apt-get upgrade
