@@ -30,3 +30,9 @@ sudo ln -s python3.10 python
 sudo apt-get install ffmpeg
 
 
+# Pipenvs
+sudo apt remove pipenv
+pip3 install pipenv
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get install python3.9
