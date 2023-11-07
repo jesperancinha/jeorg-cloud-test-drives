@@ -38,3 +38,6 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt-get install python3.9
 python3 -m pipenv shell
 sudo apt-get install pipenv
+exit
+sudo ln -s /usr/bin/python3.10 /usr/bin/python
+
