@@ -1,30 +1,29 @@
-
+# Restore desktop
+systemctl start NetworkManager
+nmcli dev wifi
 sudo apt-get install plymouth-themes
 sudo apt-get install kde-full
+# sudo service sddm stop
+sudo apt remove libqt5quick5-gles
+sudo apt install libqt5quick5
+# sudo service sddm start
+sudo apt-get install -y breeze-gtk-theme
+
+
+# Helpful
 sudo apt-get install kde-plasma-desktop 
 kbuildsycoca5 --noincremental
 sudo apt install gnome-tweaks
 sudo apt-get reinstall plasma-workspace
 sudo gnome-tweaks
-
-
-sudo service sddm stop
-sudo apt remove libqt5quick5-gles
-sudo apt install libqt5quick5
-sudo service sddm start
-
-systemctl start NetworkManager
-nmcli dev wifi
 sudo apt-get install --reinstall dnsmasq --fix-missing
 sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo add-apt-repository --remove ppa:deadsnakes/ppa
-
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install ubuntu-drivers-common
 vmware-modconfig --console --install-all
-
 cd /usr/bin/
 sudo ln -s python3.10 python
 sudo apt-get install ffmpeg
