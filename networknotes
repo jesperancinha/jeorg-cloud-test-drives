@@ -7,8 +7,8 @@ sudo apt-get install kde-full
 sudo apt remove libqt5quick5-gles
 sudo apt install libqt5quick5
 # sudo service sddm start
-sudo apt-get install -y breeze-gtk-theme
-
+# sudo apt-get install -y breeze-gtk-theme
+sudo apt install --reinstall sddm-theme-breeze
 
 # Helpful
 sudo apt-get install kde-plasma-desktop 
