@@ -179,6 +179,7 @@ sdk install java 18.0.2-open
 sdk install java 19.0.2-open
 sdk install java 20.0.1-open
 sdk install java 21-open
+sdk install java 21.0.1.crac-zulu
 sdk install sbt
 sdk install gradle
 sdk install kotlin
