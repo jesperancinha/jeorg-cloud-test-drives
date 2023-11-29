@@ -31,6 +31,7 @@ alias jdk17='sdk use java 17.0.4.1-zulu'
 alias jdk18='sdk use java 18.0.2-open'
 alias jdk19='sdk use java 19.0.2-open'
 alias jdk20='sdk use java 20.0.1-open'
+alias jdk21='sdk use java 21-open'
 alias graalVM='sdk use java 22.2.r17-grl'
 
 export ANDROID_HOME=/home/$(whoami)/Android/Sdk
@@ -169,6 +170,7 @@ alias jdk17='sdk use java 17.0.4.1-zulu'
 alias jdk18='sdk use java 18.0.2-open'
 alias jdk19='sdk use java 19.0.2-open'
 alias jdk20='sdk use java 20.0.1-open'
+alias jdk21='sdk use java 21-open'
 
 alias sound-reset='
         sudo apt autoremove; \
