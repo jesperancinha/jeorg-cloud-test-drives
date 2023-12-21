@@ -40,3 +40,6 @@ sudo apt-get install pipenv
 exit
 sudo ln -s /usr/bin/python3.10 /usr/bin/python
 
+# Unlock Chrome after Hosname changes
+!CAREFUL USING THIS!
+rm -rf ~/.config/google-chrome/Singleton*
