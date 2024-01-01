@@ -246,6 +246,14 @@ sudo apt-get update
 sudo cp /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
 ```
 
+## Recover two finger pad scrolls
+
+`sudo nano /etc/default/grub`
+
+`GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pci=nocrs"`
+
+`sudo update-grub & reboot`
+
 ## References
 
 -   [Legacy Key Storage](https://itsfoss.com/key-is-stored-in-legacy-trusted-gpg/)
