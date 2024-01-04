@@ -27,7 +27,7 @@ Furthermore, `BitLocker` conflicts with `LVM` and `ZFS` because apparently `GRUB
 
 #### 1. Windows installation
 
-In windows, we can use [VeraCrypt](https://www.veracrypt.fr/code/VeraCrypt/ to encrypt partitions and `VeraCryp` only works if the installed volume is installed in the same device where the system boots from. This makes it necessary that Windows is the first system that needs to be installed.
+In windows, we can use [VeraCrypt](https://www.veracrypt.fr/code/VeraCrypt/) to encrypt partitions and `VeraCryp` only works if the installed volume is installed in the same device where the system boots from. This makes it necessary that Windows is the first system that needs to be installed.
 
 Before installing windows make sure to have these drivers for your computer on a `USB stick`:
 1. Drivers to read the `HDD` that should preferably be `SSD's`
