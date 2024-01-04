@@ -177,8 +177,8 @@ yes | sdk install java 17.0.4.1-zulu
 yes | sdk install java 18.0.2-open
 yes | sdk install java 19.0.2-open
 yes | sdk install java 20.0.1-open
-yes | sdk install java 21.0.1-tem
 yes | sdk install java 21.0.1.crac-zulu
+yes | sdk install java 21.0.1-tem
 yes | sdk install sbt
 yes | sdk install gradle
 yes | sdk install kotlin
