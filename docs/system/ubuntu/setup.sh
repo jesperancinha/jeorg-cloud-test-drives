@@ -145,6 +145,9 @@ sudo apt install containerd.io -y
 sudo apt install gparted -y
 sudo apt upgrade -y
 sudo apt update -y
+sudo apt-get install libfuse3-3 -y
+sudo apt autoremove -y
+
 echo "- Virtualization tools installation complete!"
 
 echo "- Python installations..."
