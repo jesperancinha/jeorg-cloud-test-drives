@@ -81,7 +81,6 @@ sudo apt install pip -y
 sudo apt install ssh -y
 sudo apt install python3.7 -y
 sudo apt install python3-pip
-sudo apt install python -y
 sudo apt install zip -y
 sudo apt install unzip -y
 sudo apt install jq -y
@@ -121,7 +120,7 @@ sudo apt install libupower-glib-dev -y
 sudo apt install liblzma-dev -y
 sudo apt install libevdev-dev -y
 sudo apt install dbus -y
-sudo apt install libdbus-1-dev libdbus-glib-1-dbus -y
+sudo apt install libdbus-1-dev -y
 sudo apt install build-essential libdbus-glib-1-dev libgirepository1.0-dev libpython3-dev libdbus-1-dev -y
 sudo apt upgrade -y
 sudo apt update -y
@@ -141,7 +140,7 @@ echo "- Virtualization tools installation..."
 sudo apt install docker -y
 sudo apt install docker-compose -y
 sudo apt install docker.io -y
-sudo apt install docker-ce docker-ce-cli containerd. -y
+sudo apt install docker-ce docker-ce-cli containerd -y
 sudo apt upgrade -y
 sudo apt update -y
 echo "- Virtualization tools installation complete!"
@@ -170,18 +169,17 @@ sudo usermod -aG docker $USER
 
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
-sdk install java 8.0.302-open
-sdk install java 11.0.11.hs-adpt
-sdk install java 12.0.2.hs-adpt
-sdk install java 16.0.1.hs-adpt
-sdk install java 17.0.4.1-zulu
-sdk install java 18.0.2-open
-sdk install java 19.0.2-open
-sdk install java 20.0.1-open
-sdk install java 21-open
-sdk install java 21.0.1.crac-zulu
-sdk install sbt
-sdk install gradle
-sdk install kotlin
+yes | sdk install java 8.0.302-open
+yes | sdk install java 11.0.11.hs-adpt
+yes | sdk install java 12.0.2.hs-adpt
+yes | sdk install java 16.0.1.hs-adpt
+yes | sdk install java 17.0.4.1-zulu
+yes | sdk install java 18.0.2-open
+yes | sdk install java 19.0.2-open
+yes | sdk install java 20.0.1-open
+yes | sdk install java 21.0.1-tem
+yes | sdk install java 21.0.1.crac-zulu
+yes | sdk install sbt
+yes | sdk install gradle
+yes | sdk install kotlin
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
