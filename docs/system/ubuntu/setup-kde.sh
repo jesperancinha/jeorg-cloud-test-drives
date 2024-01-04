@@ -1,2 +1,2 @@
 !#/bin/bash
-sudo apt-get install kde-full
+sudo apt-get install kde-full -y
