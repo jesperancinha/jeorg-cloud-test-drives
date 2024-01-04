@@ -141,6 +141,8 @@ sudo apt install docker -y
 sudo apt install docker-compose -y
 sudo apt install docker.io -y
 sudo apt install docker-ce docker-ce-cli containerd -y
+sudo apt install containerd.io -y
+sudo apt install gparted -y
 sudo apt upgrade -y
 sudo apt update -y
 echo "- Virtualization tools installation complete!"
