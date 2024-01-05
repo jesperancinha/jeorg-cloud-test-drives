@@ -72,3 +72,8 @@ This installation was very difficult to achieve and it took a long time to succe
 If you have questions about this document feel free to open issues about this in this repo.
 I hope I have helped you.
 
+## Resources
+
+- [Linux and Windows both encrypted in dual boot](https://echo-bravo-fox.medium.com/linux-and-windows-encrypted-in-dual-boot-12329821367c)
+- [How to Mount Bitlocker Encrypted Windows Partition in Linux](https://itsfoss.com/mount-encrypted-windows-partition-linux/https://itsfoss.com/mount-encrypted-windows-partition-linux/)
+
