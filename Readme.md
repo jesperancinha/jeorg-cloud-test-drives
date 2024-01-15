@@ -17,13 +17,19 @@
 
 ---
 
-Study project for all things cloud. Spin-offs will happen when detailing
+## Introduction
 
+Study project for all things cloud and system. Spin-offs will happen when detailing
+
+
+## Support 
 It provides support to the following Medium articles:
 
+[![](https://img.shields.io/badge/Chrome%20OS%20Guide%20to%20go%20from%20Zero%20to%20DevOps%20Hero%20in%20a%20nutshell-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/swlh/chrome-os-guide-to-go-from-zero-to-devops-hero-in-a-nutshell-f66c4bc5782f)
 
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/swlh/chrome-os-guide-to-go-from-zero-to-devops-hero-in-a-nutshell-f66c4bc5782f)
-[Chrome OS Guide to go from Zero to DevOps Hero in a nutshell](https://medium.com/swlh/chrome-os-guide-to-go-from-zero-to-devops-hero-in-a-nutshell-f66c4bc5782f)
+## Documents
+
+ In this repo there are guides and scripts to automatically get your machine up and running as a DEV. Because of this, please make sure to read every script you may find here BEFORE executing it. If you have questions, please `FEEL FREE` to open an issue. Also read the License provided in the [License](./License) file for further details BEFORE running ANY script!
 
 ## About me
 
