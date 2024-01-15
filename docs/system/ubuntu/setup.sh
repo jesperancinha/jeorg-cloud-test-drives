@@ -70,24 +70,7 @@ sudo apt upgrade -y
 echo "- Repo setup complete!"
 
 echo "- Dev tools installation..."
-sudo apt install git -y
-sudo apt install git-gui -y
-sudo apt install gitk -y
-sudo apt install maven -y
-sudo apt install wget -y
-sudo apt install vim -y
-sudo apt install nano -y
-sudo apt install pip -y
-sudo apt install ssh -y
-sudo apt install python3.7 -y
-sudo apt install python3-pip
-sudo apt install zip -y
-sudo apt install unzip -y
-sudo apt install jq -y
-sudo apt install npm -y
-sudo apt install zsh -y
-sudo apt-get install gh -y
-sudo apt-get install fonts-powerline -y
+sudo apt install git git-gui gitk maven wget vim nano pip ssh python3.7 python3-pip zip unzip jq npm zsh gh fonts-powerline net-tools -y
 
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
