@@ -5,12 +5,12 @@
 1. Normal
 
 ```shell
-ps -aux | grep /share/JetBrains | cut -d' ' -f3 | xargs -I {} kill -9 {}
+ps -aux | grep /share/JetBrains | cut -d" " -f3 | xargs -I {} kill -9 {}
 ```
 
 2. Force
 
 ```shell
-ps -aux | grep /share/JetBrains | cut -d' ' -f3 | xargs -I {} kill {}
+ps -aux | grep /share/JetBrains | cut -d" " -f3 | xargs -I {} kill {}
 ```
 
