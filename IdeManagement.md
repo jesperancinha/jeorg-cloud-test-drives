@@ -1,6 +1,6 @@
 # JEOrg Cloud Test Drives
 
-## Stop IntelliJ Comman Line in Linux
+## Stop IntelliJ Command Line in Linux
 
 1. Normal
 

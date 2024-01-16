@@ -47,7 +47,7 @@ sudo cp /run/systemd/resolve/resolv.conf /etc/resolv.conf
 sudo systemctl restart resolvconf
 
 # A list of files that can be edited to configure the DNS servers
-# Check the examples folder for examples. If the example is not available it just means that I did not change the original file in any way.
+# Check the examples folder for examples. If the jesperancinha is not available it just means that I did not change the original file in any way.
 sudo vim /etc/systemd/resolved.conf
 sudo vim /etc/NetworkManager/NetworkManager.conf
 sudo vim /etc/resolvconf/resolv.conf.d/head
@@ -57,7 +57,7 @@ sudo vim /etc/dhcp/dhclient.conf
 sudo vim /etc/resolv.conf
 
 # A list of files that can be edited to configure the DNS servers
-# Check the examples folder for examples. If the example is not available it just means that I did not change the original file in any way.
+# Check the examples folder for examples. If the jesperancinha is not available it just means that I did not change the original file in any way.
 cat /etc/systemd/resolved.conf
 cat /etc/NetworkManager/NetworkManager.conf
 cat /etc/resolvconf/resolv.conf.d/head
