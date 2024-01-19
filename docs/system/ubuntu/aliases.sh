@@ -192,7 +192,9 @@ alias sound-reset='
         sudo alsa force-reload
 '
 
-alias stop-intellij='ps -aux | grep /share/JetBrains | cut -d" " -f3 | xargs -I {} kill {}'
+alias stop-intellij='ps -aux | grep /share/JetBrains | cut -d" " -f3 | xargs -I {} kill {}; \
+        ps -aux | grep /share/JetBrains | cut -d" " -f5 | xargs -I {} kill -9 {}
+'
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
