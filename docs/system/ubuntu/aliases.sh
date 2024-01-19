@@ -194,7 +194,8 @@ alias sound-reset='
 # WARNING!
 # READ AND UNDERSTAND BEFORE RUNNING THIS ALIAS!
 alias stop-intellij='ps -aux | grep /share/JetBrains | cut -d" " -f2 | grep "1\|2\|3\|4\|5\|6\|7\|8\|9\|0" | xargs -I {} kill {}; \
-        ps -aux | grep /share/JetBrains | cut -d" " -f4 | grep "1\|2\|3\|4\|5\|6\|7\|8\|9\|0" | xargs -I {} kill -9 {}
+        ps -aux | grep /share/JetBrains | cut -d" " -f4 | grep "1\|2\|3\|4\|5\|6\|7\|8\|9\|0" | xargs -I {} kill -9 {}; \
+        ps -aux | grep /share/JetBrains | cut -d" " -f5 | grep "1\|2\|3\|4\|5\|6\|7\|8\|9\|0" | xargs -I {} kill -9 {}
 '
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
