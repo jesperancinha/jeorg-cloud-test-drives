@@ -94,6 +94,7 @@ alias upgrade-all-overseer='echo "$(tput setaf 2)Starting upgrade..."; \
   apt list --upgradable -a; \
   sudo apt list --upgradable | cut -f1 -d'/' | xargs -I {} sudo apt-get upgrade {} -y; \
   apt list --upgradable -a; \
+  npm install -g npm@latest; \
   echo "$(tput setaf 4)Finished Upgrade!"; \
   '
 
@@ -139,6 +140,7 @@ alias upgrade-all='echo "$(tput setaf 2)Starting upgrade..."; \
   fwupdmgr get-updates; \
   fwupdmgr update; \
   apt list --upgradable -a; \
+  npm install -g npm@latest; \
   echo "$(tput setaf 4)Finished Upgrade!"; \
   '
 
