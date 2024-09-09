@@ -31,15 +31,15 @@ brew install python
 echo "- Dev tools installation complete!"
 
 echo "- Python installations..."
-pip install flask
-pip install futures
-pip install pebble
-pip install pika
-pip install coapthon
-pip install paho-mqtt
-pip install kafka-python
-pip install requests
-pip install netifaces
+pipx install flask
+pipx install futures
+pipx install pebble
+pipx install pika
+pipx install coapthon
+pipx install paho-mqtt
+pipx install kafka-python
+pipx install requests
+pipx install netifaces
 echo "- Python installs complete!"
 
 echo "- Performing update..."
