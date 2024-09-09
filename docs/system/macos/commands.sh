@@ -30,6 +30,7 @@ brew install zsh
 brew install python
 brew install --cask docker
 brew install locust
+brew install --cask iterm2
 echo "- Dev tools installation complete!"
 
 echo "- Python installations..."
