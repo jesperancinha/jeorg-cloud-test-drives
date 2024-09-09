@@ -12,6 +12,7 @@ brew upgrade
 echo "- Update complete!"
 
 echo "- Dev tools installation..."
+brew install google-chrome
 brew install wget
 brew install curl
 brew install gnupg
