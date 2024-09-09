@@ -29,6 +29,7 @@ brew install jq
 brew install zsh
 brew install python
 brew install --cask docker
+brew install locust
 echo "- Dev tools installation complete!"
 
 echo "- Python installations..."
