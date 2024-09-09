@@ -28,7 +28,6 @@ brew install python@3.7
 brew install jq
 brew install zsh
 brew install python
-brew install docker
 brew install --cask docker
 echo "- Dev tools installation complete!"
 
