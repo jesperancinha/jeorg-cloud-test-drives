@@ -63,3 +63,8 @@ yes | sdk install sbt
 yes | sdk install gradle
 yes | sdk install kotlin
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+echo "Select a Meslo LG for Powerline Font in your terminal font configuration"
