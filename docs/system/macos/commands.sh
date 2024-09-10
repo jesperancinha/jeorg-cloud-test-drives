@@ -33,6 +33,7 @@ brew install locust
 brew install --cask iterm2
 brew install yarn
 brew install npm
+brew install --cask drawio
 echo "- Dev tools installation complete!"
 
 echo "- Python installations..."
