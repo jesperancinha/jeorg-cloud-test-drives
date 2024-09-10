@@ -31,6 +31,8 @@ brew install python
 brew install --cask docker
 brew install locust
 brew install --cask iterm2
+brew install yarn
+brew install npm
 echo "- Dev tools installation complete!"
 
 echo "- Python installations..."
