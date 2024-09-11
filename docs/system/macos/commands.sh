@@ -36,6 +36,7 @@ brew install npm
 brew install --cask drawio
 brew install gimp
 brew install --cask libreoffice
+brew install --cask slack
 echo "- Dev tools installation complete!"
 
 echo "- Python installations..."
