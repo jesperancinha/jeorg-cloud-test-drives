@@ -34,6 +34,8 @@ brew install --cask iterm2
 brew install yarn
 brew install npm
 brew install --cask drawio
+brew install gimp
+brew install --cask libreoffice
 echo "- Dev tools installation complete!"
 
 echo "- Python installations..."
