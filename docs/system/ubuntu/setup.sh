@@ -130,6 +130,7 @@ sudo apt install visualvm -y
 sudo apt-get install libfuse3-3 libfuse2 -y
 sudo apt-get install gimp gimp-gmic -y
 sudo apt-get install kdenlive -y
+sudo apt install python3-pip -y
 sudo ln -s ~/.docker/cli-plugins/docker-compose /usr/local/bin/docker-compose -y
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 sudo apt upgrade -y
@@ -154,6 +155,7 @@ pip install locust
 pip3 install --upgrade pip
 pip3 install --upgrade awscli
 echo "- Python installs complete!"
+sudo apt install python3-pip
 
 sudo apt upgrade -y
 sudo apt update -y
