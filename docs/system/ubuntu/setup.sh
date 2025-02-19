@@ -155,7 +155,6 @@ pip install locust
 pip3 install --upgrade pip
 pip3 install --upgrade awscli
 echo "- Python installs complete!"
-sudo apt install python3-pip
 
 sudo apt upgrade -y
 sudo apt update -y
