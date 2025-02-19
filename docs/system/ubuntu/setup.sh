@@ -126,6 +126,7 @@ sudo apt install docker.io -y
 sudo apt install docker-ce docker-ce-cli containerd -y
 sudo apt install containerd.io -y
 sudo apt install gparted -y
+sudo apt install visualvm -y
 sudo apt-get install libfuse3-3 libfuse2 -y
 sudo apt-get install gimp gimp-gmic -y
 sudo apt-get install kdenlive -y
