@@ -131,10 +131,10 @@ sudo apt-get install libfuse3-3 libfuse2 -y
 sudo apt-get install gimp gimp-gmic -y
 sudo apt-get install kdenlive -y
 sudo apt install python3-pip -y
-sudo apt install pipenv
-sudo apt install maven
-sudo apt install awscli
-sudo apt install npm
+sudo apt install pipenv -y
+sudo apt install maven -y 
+sudo apt install awscli -y 
+sudo apt install npm -y 
 sudo apt install zsh -y
 sudo apt install vim -y
 sudo ln -s ~/.docker/cli-plugins/docker-compose /usr/local/bin/docker-compose -y
