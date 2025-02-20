@@ -141,6 +141,7 @@ sudo apt install awscli -y
 sudo apt install npm -y 
 sudo apt install zsh -y
 sudo apt install vim -y
+sudo apt install libreoffice -y
 sudo add-apt-repository ppa:serge-rider/dbeaver-ce -y
 sudo apt update -y
 sudo apt install dbeaver-ce -y
