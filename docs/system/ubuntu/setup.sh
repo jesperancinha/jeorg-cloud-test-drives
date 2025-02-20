@@ -51,7 +51,7 @@ echo "- Cyber security installation complete!"
 
 echo "- Repo setup..."
 sudo apt install software-properties-common -y
-sudo add-apt-repository ppa:deadsnakes/ppa
+sudo add-apt-repository ppa:deadsnakes/ppa -y
 AZ_REPO=$(lsb_release -cs)
 sudo apt update -y
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" |
@@ -137,6 +137,9 @@ sudo apt install awscli -y
 sudo apt install npm -y 
 sudo apt install zsh -y
 sudo apt install vim -y
+sudo add-apt-repository ppa:serge-rider/dbeaver-ce -y
+sudo apt update -y
+sudo apt install dbeaver-ce -y
 sudo ln -s ~/.docker/cli-plugins/docker-compose /usr/local/bin/docker-compose -y
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 sudo apt upgrade -y
