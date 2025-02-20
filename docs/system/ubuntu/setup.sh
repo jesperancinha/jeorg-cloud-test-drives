@@ -107,6 +107,10 @@ sudo apt install libdbus-1-dev -y
 sudo apt install build-essential libdbus-glib-1-dev libgirepository1.0-dev libpython3-dev libdbus-1-dev -y
 sudo apt upgrade -y
 sudo apt update -y
+curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
+sudo dpkg -i session-manager-plugin.deb
+session-manager-plugin
+rm session-manager-plugin.deb
 echo "- Library installation complete!"
 
 echo "- Cloud tools installation..."
