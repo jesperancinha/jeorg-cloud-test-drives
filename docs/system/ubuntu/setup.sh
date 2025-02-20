@@ -178,4 +178,5 @@ yes | sdk install java 21.0.1-tem
 yes | sdk install sbt
 yes | sdk install gradle
 yes | sdk install kotlin
+yes | sdk install maven
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
