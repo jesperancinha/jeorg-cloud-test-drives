@@ -1,5 +1,11 @@
 # Ubuntu installation
 
+## Index
+
+- [Display monitor recover](displayrecovery.md)
+- [Java Versions](javaversions.md)
+- [XOrg](xorg.md)
+
 ## Download install script
 
 For some docker images you may need to run:
