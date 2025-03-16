@@ -57,3 +57,5 @@ sudo ln -s /usr/bin/python3.10 /usr/bin/python
 ```shell
 rm -rf ~/.config/google-chrome/Singleton*
 ```
+
+[Back](Readme.md)

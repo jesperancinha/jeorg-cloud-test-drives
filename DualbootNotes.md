@@ -77,3 +77,4 @@ I hope I have helped you.
 - [Linux and Windows both encrypted in dual boot](https://echo-bravo-fox.medium.com/linux-and-windows-encrypted-in-dual-boot-12329821367c)
 - [How to Mount Bitlocker Encrypted Windows Partition in Linux](https://itsfoss.com/mount-encrypted-windows-partition-linux/https://itsfoss.com/mount-encrypted-windows-partition-linux/)
 
+[Back](Readme.md)

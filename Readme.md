@@ -22,6 +22,7 @@ Make sure to read through the main page over at:
 - [IDE Management](IdeManagement.md)
 - [Installers](Installers.md)
 - [Dualboot Notes](DualbootNotes.md)
+- [Top Linux Commands](TopLinuxCommands.md)
 
 ## Support 
 It provides support to the following Medium articles:
