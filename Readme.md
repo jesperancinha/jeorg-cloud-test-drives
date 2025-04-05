@@ -18,11 +18,11 @@ Study project for all things cloud and system. Spin-offs will happen when detail
 Make sure to read through the main page over at:
 [Cloud Test Drivers Homepage](https://jesperancinha.github.io/jeorg-cloud-test-drives/)
 
-- [Ubuntu Notes](UbuntuNotes.md)
-- [IDE Management](IdeManagement.md)
-- [Installers](Installers.md)
-- [Dualboot Notes](DualbootNotes.md)
-- [Top Linux Commands](TopLinuxCommands.md)
+-   [Ubuntu Notes](UbuntuNotes.md)
+-   [IDE Management](IdeManagement.md)
+-   [Installers](Installers.md)
+-   [Dualboot Notes](DualbootNotes.md)
+-   [Top Linux Commands](TopLinuxCommands.md)
 
 ## Support 
 It provides support to the following Medium articles:
