@@ -24,11 +24,6 @@ Make sure to read through the main page over at:
 -   [Dualboot Notes](DualbootNotes.md)
 -   [Top Linux Commands](TopLinuxCommands.md)
 
-## Support 
-It provides support to the following Medium articles:
-
-[![](https://img.shields.io/badge/Chrome%20OS%20Guide%20to%20go%20from%20Zero%20to%20DevOps%20Hero%20in%20a%20nutshell-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/swlh/chrome-os-guide-to-go-from-zero-to-devops-hero-in-a-nutshell-f66c4bc5782f)
-
 ## Documents
 
  In this repo there are guides and scripts to automatically get your machine up and running as a DEV. Because of this, please make sure to read every script you may find here BEFORE executing it. If you have questions, please `FEEL FREE` to open an issue. Also read the License provided in the [License](./License) file for further details BEFORE running ANY script!
