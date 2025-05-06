@@ -34,6 +34,8 @@ alias jdk20='sdk use java 20.0.1-open'
 alias jdk21='sdk use java 21.0.1-tem'
 alias jdk21crac='sdk use java 21.0.1.crac-zulu'
 alias graalVM='sdk use java 22.2.r17-grl'
+alias jdk24='sdk use java 24-tem'
+
 
 export ANDROID_HOME=/home/$(whoami)/Android/Sdk
 
