@@ -39,6 +39,12 @@ sudo apt upgrade -y
 sudo apt update -y
 echo "- Dev tools installation complete!"
 
+echo "- Brew installation..."
+test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
+test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
+echo "- Brew installation complete!"
+
 echo "- Cyber security installation..."
 sudo apt install ecryptfs-utils cryptsetup -y
 sudo apt install ca-certificates apt-transport-https -y
@@ -124,25 +130,12 @@ sudo apt upgrade -y
 echo "- Cloud tools installation complete!"
 
 echo "- Virtualization tools installation..."
-sudo apt install docker -y
+sudo apt install libfuse3-3 docker gimp-gmic containerd.io docker-ce-cli containerd docker.io
 sudo apt install docker-compose -y
-sudo apt install docker.io -y
-sudo apt install docker-ce docker-ce-cli containerd -y
-sudo apt install containerd.io -y
-sudo apt install gparted -y
-sudo apt install visualvm -y
-sudo apt-get install libfuse3-3 libfuse2 -y
-sudo apt-get install gimp gimp-gmic -y
-sudo apt-get install kdenlive -y
-sudo apt install python3-pip -y
-sudo apt install pipenv -y
-sudo apt install maven -y 
-sudo apt install awscli -y 
-sudo apt install npm -y 
-sudo apt install zsh -y
-sudo apt install vim -y
-sudo apt install libreoffice -y
-sudo apt install gh -y
+sudo apt install docker-ce \
+     gparted visualvm libfuse2 gimp pip pipx \
+     kdenlive python3-pip pipenv maven awscli npm zsh pyenv vim \
+     libreoffice gh -y
 sudo add-apt-repository ppa:serge-rider/dbeaver-ce -y
 sudo apt update -y
 sudo apt install dbeaver-ce -y
@@ -151,24 +144,28 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 sudo apt upgrade -y
 sudo apt update -y
 sudo apt autoremove -y
-
+brew install pipx
 echo "- Virtualization tools installation complete!"
 
 echo "- Python installations..."
-pip install flask
-pip install futures
-pip install pebble
-pip install pika
-pip install coapthon
-pip install paho-mqtt
-pip install kafka-python
-pip install requests
-pip install netifaces
-pip install awslogs
-pip install awscli
-pip install locust
-pip3 install --upgrade pip
-pip3 install --upgrade awscli
+pipx install flask
+pipx install futures
+pipx install pebble
+pipx install pika
+pipx install coapthon
+pipx install paho-mqtt
+pipx install kafka-python
+pipx install requests
+pipx install netifaces
+pipx install awslogs
+pipx install awscli
+pipx install locust
+pipx install --upgrade pip
+pipx install --upgrade awscli
+pyenv install 3.12.0
+# pyenv global 3.12.0
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.12 1
+# sudo update-alternatives --config python
 echo "- Python installs complete!"
 
 sudo apt upgrade -y
